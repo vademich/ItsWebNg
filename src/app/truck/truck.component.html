@@ -1,0 +1,11 @@
+<div class="page">
+    <div class="truck"
+        [@truckHover]="isTruckHover ? 'truckFinish' : 'truckStart'"
+        (mouseenter)="moveTruck()">
+        <div class="light"
+            [@lightHover]="isLightHover ? 'on' : 'off'"
+            (mouseenter)="lightOnOff()"
+            (mouseleave)="lightOnOff()">
+        </div>
+    </div>
+</div>
