@@ -54,6 +54,68 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         width: '500px'
       })),
       transition('width0 => width500', [animate('1s ease-in')]),
+    ]),
+    trigger('lettersFirst', [
+      state('move-from-right',
+      style({
+        'transform': 'translateX(0px)',
+        'opacity': '1',
+        'font-family': 'Gilroy',
+        'font-size': '48px',
+        'font-weight': '600',
+        'line-height': '50px',
+        'letter-spacing': '0em',
+        'text-align': 'left',
+        'color': '#CED0E2',
+        'display': 'flex',
+        'justify-content': 'space-between'
+      })),
+      state('start',
+      style({
+        'transform': 'translateX(400px)',
+        'opacity': '0',
+        'font-family': 'Gilroy',
+        'font-size': '48px',
+        'font-weight': '600',
+        'line-height': '50px',
+        'letter-spacing': '0em',
+        'text-align': 'left',
+        'color': '#CED0E2',
+        'display': 'flex',
+        'justify-content': 'space-between'
+      })),
+      transition('start => move-from-right', [animate('1s ease-out')])
+    ]),
+    trigger('lettersSecond', [
+      state('move-from-left',
+      style({
+        'transform': 'translateX(0px)',
+        'opacity': '1',
+        'font-family': 'Gilroy',
+        'font-size': '48px',
+        'font-weight': '600',
+        'line-height': '50px',
+        'letter-spacing': '0em',
+        'text-align': 'left',
+        'color': '#CED0E2',
+        'display': 'flex',
+        'justify-content': 'space-between'
+      })),
+      state('start',
+      style({
+        'transform': 'translateX(-400px)',
+        'opacity': '0',
+        'font-family': 'Gilroy',
+        'font-size': '48px',
+        'font-weight': '600',
+        'line-height': '50px',
+        'letter-spacing': '0em',
+        'text-align': 'left',
+        'color': '#CED0E2',
+        'display': 'flex',
+        'justify-content': 'space-between'
+      })),
+      transition('start => move-from-left', [animate('1s ease-out')])
     ])
   ],
   templateUrl: './truck.component.html',
@@ -75,6 +137,10 @@ export class TruckComponent {
   isLineHover = false;
   lineShow(){
     this.isLineHover = true;
+  }
+  lettersHover = false;
+  moveLetters(){
+    this.lettersHover = true;
   }
 
 }
