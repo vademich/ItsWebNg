@@ -1,7 +1,22 @@
-<div class="page">
+<div class="page"
+    (mouseenter)="captionShow()"
+    (mouseenter)="lineShow()"
+    (mouseenter)="moveTruck()">
+
+    <div class="caption"
+        [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
+        <div class="decor">
+            <img src="../../assets/images/q-quote.svg">
+            <div style="width:10px;"></div>
+            <hr align="left" color="blue" width="500px"
+                [@lineHover]="isLineHover ? 'width500' : 'width0'">
+        </div>
+        <p class="gilroy-16 black">Все это сопровождает нас в бизнесе в период его становления. Мы почувствовали это на себе, на своем бизнесе, созданном в 2014 году.
+            На уровне одного города мы начали объединять различный сервис для грузовых машин и за несколько лет стали крупнейшим агрегатором автомобильного сервиса в Евразии.</p>
+    </div>
+
     <div class="truck"
-        [@truckHover]="isTruckHover ? 'truckFinish' : 'truckStart'"
-        (mouseenter)="moveTruck()">
+        [@truckHover]="isTruckHover ? 'truckFinish' : 'truckStart'">
         <div class="light"
             [@lightHover]="isLightHover ? 'on' : 'off'"
             (mouseenter)="lightOnOff()"
