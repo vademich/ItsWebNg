@@ -2,6 +2,9 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: #FBFBFD;
+    padding-top: 120px;
+    padding-bottom: 60px;
 }
 .page {
     overflow: hidden;
