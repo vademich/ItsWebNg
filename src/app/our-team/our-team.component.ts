@@ -3,34 +3,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 
 @Component({
   selector: 'app-our-team',
-  animations: [
-    trigger('captionHover', [
-      state('invisible',
-      style({
-        opacity: 0
-      })),
-      state('visible',
-      style({
-        opacity: 1
-      })),
-      transition('invisible => visible', [animate('1s')]),
-    ]),
-    trigger('lineHover', [
-      state('width0',
-      style({
-        width: '0px'
-      })),
-      state('width500',
-      style({
-        width: '500px'
-      })),
-      transition('width0 => width500', [animate('1s ease-in')]),
-    ]),
-  ],
+  animations: [],
   templateUrl: './our-team.component.html',
   styleUrls: ['./our-team.component.css']
 })
 export class OurTeamComponent {
+  text = `Все это благодаря небольшой, но очень сильной и эффективной команде. 
+  И чтобы расти дальше, любой компании нужно усиливать её со всех сторон. 
+  В компании должна быть сильная команда IT, сильная бухгалтерская и юридическая часть,
+  HR и безопасность.`;
+  
   image1 = '../assets/images/people/gerbert.png';
   employeeName1 = 'Герберт Ромберг';
   employeeJob1 = 'Основатель компании';
@@ -42,14 +24,4 @@ export class OurTeamComponent {
   employeeJob3 = 'Frontend developer';
   image3 = '../assets/images/people/vadim.jpeg';
 
-  
-
-  isCaptionHover = false;
-  captionShow(){
-    this.isCaptionHover = true;
-  }
-  isLineHover = false;
-  lineShow(){
-    this.isLineHover = true;
-  }
 }
