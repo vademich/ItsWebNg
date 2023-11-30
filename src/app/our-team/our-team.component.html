@@ -1,0 +1,33 @@
+<div class="h-row"
+    (mouseenter)="captionShow()"
+    (mouseenter)="lineShow()">
+    <div class="column">
+        <p class="black-letters">Наша</p>
+        <p class="blue-letters">команда</p>
+    </div>
+    
+    <div class="caption padding-left-30"
+            [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
+            <div class="decor">
+                <img src="../../assets/images/q-quote.svg">
+                <div style="width:10px;"></div>
+                <hr align="left" color="blue" width="410px"
+                    [@lineHover]="isLineHover ? 'width500' : 'width0'">
+            </div>
+            <p class="gilroy-16 black">
+                Все это благодаря небольшой, но очень сильной и эффективной команде. 
+                И чтобы расти дальше, любой компании нужно усиливать её со всех сторон. 
+                В компании должна быть сильная команда IT, сильная бухгалтерская и юридическая часть,
+                HR и безопасность.
+            </p>
+        </div>
+        
+    <img src="../../assets/images/team.svg">
+</div>
+
+  <span class="line">
+    <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
+    <app-employee [employeeName]="employeeName2" [job]="employeeJob2"></app-employee>
+    <app-employee [employeeImage]="image3" [employeeName]="employeeName3" [job]="employeeJob3"></app-employee>
+    <app-employee></app-employee>
+</span>
