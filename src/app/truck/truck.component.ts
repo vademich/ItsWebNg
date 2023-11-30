@@ -33,28 +33,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('on => off', [animate('0.5s')]),
       transition('off => on', [animate('0.5s')])
     ]),
-    trigger('captionHover', [
-      state('invisible',
-      style({
-        opacity: 0
-      })),
-      state('visible',
-      style({
-        opacity: 1
-      })),
-      transition('invisible => visible', [animate('1s')]),
-    ]),
-    trigger('lineHover', [
-      state('width0',
-      style({
-        width: '0px'
-      })),
-      state('width500',
-      style({
-        width: '500px'
-      })),
-      transition('width0 => width500', [animate('1s ease-in')]),
-    ]),
     trigger('lettersFirst', [
       state('move-from-right',
       style({
@@ -122,6 +100,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./truck.component.css']
 })
 export class TruckComponent {
+  text = `Все это сопровождает нас в бизнесе в период его становления. Мы почувствовали это на себе, на своем бизнесе, созданном в 2014 году.
+  На уровне одного города мы начали объединять различный сервис для грузовых машин и за несколько лет стали крупнейшим агрегатором автомобильного сервиса в Евразии.`
+  
   isTruckHover = false;
   moveTruck(){
     this.isTruckHover = true;
@@ -129,14 +110,6 @@ export class TruckComponent {
   isLightHover = false;
   lightOnOff(){
     this.isLightHover = !this.isLightHover;
-  }
-  isCaptionHover = false;
-  captionShow(){
-    this.isCaptionHover = true;
-  }
-  isLineHover = false;
-  lineShow(){
-    this.isLineHover = true;
   }
   lettersHover = false;
   moveLetters(){

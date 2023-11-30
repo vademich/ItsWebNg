@@ -25,28 +25,6 @@
     background-repeat: no-repeat;
     background-position: bottom left;
 }
-.caption {
-    width: 545px;
-    height: 110px;
-}
-.decor {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    overflow: hidden;
-}
-.line {
-    font-family: Gilroy;
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 50px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #CED0E2;
-    display: flex;
-    justify-content: space-between;
-}
 .gilroy-16 {
     font-family: Gilroy;
     font-size: 16px;
