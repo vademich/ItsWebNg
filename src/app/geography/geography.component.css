@@ -1,0 +1,11 @@
+.screen {
+    background-color: #F5F6FB;
+    padding: 60px;
+}
+img {
+    width: 250px;
+}
+.first, .second {
+    display: flex;
+    justify-content: space-around;
+}

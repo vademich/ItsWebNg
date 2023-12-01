@@ -9,10 +9,11 @@ import { HeaderComponent } from './header/header.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { OurTeamComponent } from './our-team/our-team.component';
 import { QuoteBlockComponent } from './quote-block/quote-block.component';
+import { GeographyComponent } from './geography/geography.component';
 
 @NgModule({
     imports: [BrowserModule, BrowserAnimationsModule],
-    declarations: [AppComponent, TruckComponent, MainComponent, HeaderComponent, EmployeeComponent, OurTeamComponent, QuoteBlockComponent],
+    declarations: [AppComponent, TruckComponent, MainComponent, HeaderComponent, EmployeeComponent, OurTeamComponent, QuoteBlockComponent, GeographyComponent],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,21 @@
+<div class="screen">
+    <p class="gilroy-48 blue">География</p>
+    <p class="gilroy-24 black">Новые страны - новые возможности:</p>
+
+    <div (mouseenter)="showFlags()" >
+        <div class="first" [@flag-line-one]="flagsOne ? 'in' : 'out'">
+            <img src="../../assets/images/flags/Казахстан.svg">
+            <img src="../../assets/images/flags/Таджикистан.svg">
+            <img src="../../assets/images/flags/Кыргызстан.svg">
+            <img src="../../assets/images/flags/Узбекистан.svg">
+            <img src="../../assets/images/flags/Грузия.svg">
+        </div>
+        <div class="second" [@flag-line-two]="flagsTwo ? 'in' : 'out'">
+            <img src="../../assets/images/flags/Армения.svg">
+            <img src="../../assets/images/flags/Россия.svg">
+            <img src="../../assets/images/flags/Беларусь.svg">
+            <img src="../../assets/images/flags/Турция.svg">
+            <img src="../../assets/images/flags/Германия.svg">
+        </div>
+    </div>
+</div>
