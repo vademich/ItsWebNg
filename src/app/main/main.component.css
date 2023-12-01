@@ -48,6 +48,8 @@
     top: 242px;
     left: 314px;
     background-repeat: no-repeat;
+    /* width: calc(100% - 490px);
+    overflow: hidden; */
 }
 .bannerBlock{
     border-radius: 20px;

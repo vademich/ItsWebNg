@@ -1,17 +1,28 @@
-<div class="h-row">
-    <div class="column">
-        <p class="black-letters">Наша</p>
-        <p class="blue-letters">команда</p>
-    </div>
-    
-    <app-quote-block [text]="text"></app-quote-block>
-        
-    <img src="../../assets/images/team.svg">
-</div>
+<div class="screen">
+    <div style="background-color: #FBFBFD;">
+        <div class="h-row">
+            <div class="gilroy-48">
+                <span class="black">Наша</span><br>
+                <span class="blue">команда</span>
+            </div>        
+            <app-quote-block [text]="text"></app-quote-block>            
+            <img src="../../assets/images/team.svg">
+        </div>
 
-  <span class="line">
-    <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
-    <app-employee [employeeName]="employeeName2" [job]="employeeJob2"></app-employee>
-    <app-employee [employeeImage]="image3" [employeeName]="employeeName3" [job]="employeeJob3"></app-employee>
-    <app-employee></app-employee>
-</span>
+
+        <div class="line" 
+            (mouseenter)="showArrows()"
+            (mouseleave)="showArrows()"
+            (mouseenter)="showEmployees()"
+            [@slide-empl]="employeesShown ? 'slide' : 'out'"
+            >
+            <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"></div>
+                <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
+                <app-employee [employeeName]="employeeName2" [job]="employeeJob2"></app-employee>
+                <app-employee [employeeImage]="image3" [employeeName]="employeeName3" [job]="employeeJob3"></app-employee>
+                <app-employee></app-employee>
+            <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"></div>
+        </div>
+        
+    </div>
+</div>

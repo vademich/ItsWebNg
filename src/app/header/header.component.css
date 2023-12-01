@@ -7,7 +7,7 @@
     flex-shrink: 0;
     background: #FBFBFD;
     box-shadow: 0px 2px 2px gray;
-    z-index: 10;
+    z-index: 900;
 
     display: flex;
 }

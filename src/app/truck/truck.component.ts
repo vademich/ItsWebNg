@@ -15,7 +15,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       style({
         backgroundImage: 'url(../../../assets/images/truck.svg)',
         'opacity': 1,
-        'transform': 'translateX(-100px)',
+        'transform': 'translateX(-200px)',
       })),
       transition('truckStart => truckFinish', [animate('1s ease-out')])
     ]),
