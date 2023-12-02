@@ -1,4 +1,6 @@
 .screen {
+    width: 100%;
+    overflow: hidden;
     background-color: #F5F6FB;
     padding: 60px;
 }

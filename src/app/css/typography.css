@@ -22,3 +22,7 @@
 .blue {
     color: #002ED0;
 }
+.up {
+    position: relative;
+    top: -60px;
+}
