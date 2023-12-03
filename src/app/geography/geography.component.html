@@ -1,7 +1,9 @@
 <div class="screen">
-    <p class="gilroy-48 blue">География</p>
-    <p class="gilroy-24 black">Новые страны - новые возможности:</p>
-
+    <div class="col">
+        <p class="gilroy-48 blue">География</p>
+        <p class="gilroy-24 black">Новые страны - новые возможности:</p>
+    </div>
+    
     <div (mouseenter)="showFlags()" >
         <div class="first" [@flag-line-one]="flagsOne ? 'in' : 'out'">
             <img src="../../assets/images/flags/Казахстан.svg">

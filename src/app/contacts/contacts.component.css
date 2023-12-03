@@ -1,0 +1,21 @@
+.screen {
+    padding-top: 260px;
+    padding-bottom: 120px;
+}
+.page {
+    width: 100%;
+    overflow: hidden;
+    margin: 60px;
+}
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

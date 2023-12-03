@@ -2,7 +2,8 @@
     width: 100%;
     overflow: hidden;
     background-color: #F5F6FB;
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 img {
     width: 250px;
@@ -10,4 +11,10 @@ img {
 .first, .second {
     display: flex;
     justify-content: space-around;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-bottom: 30px;
 }

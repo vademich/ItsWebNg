@@ -1,3 +1,9 @@
+.gilroy-14 {
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
 .gilroy-16 {
     font-family: Gilroy;
     font-size: 16px;
@@ -9,6 +15,12 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 26px;
+}
+.gilroy-24-400 {
+    font-family: Gilroy;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
 }
 .gilroy-48 {
     font-family: Gilroy;
@@ -22,6 +34,9 @@
 .blue {
     color: #002ED0;
 }
+/* * * * * * */
+/* * * * * * */
+/* * * * * * */
 .up {
     position: relative;
     top: -60px;
