@@ -14,6 +14,14 @@
     font-weight: 400;
     line-height: normal;
 }
+.verticale {
+    height: 350px;
+    border-left: 1px solid transparent;
+}
+.verticale-2 {
+    height: 350px;
+    border-left: 1px solid transparent;
+}
 .col {
     display: flex;
     flex-direction: column;
