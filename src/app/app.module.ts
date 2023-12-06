@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
 
 import { environment } from 'src/environments/environment';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     imports: [
@@ -43,7 +44,7 @@ import { environment } from 'src/environments/environment';
           } as RecaptchaSettings,
         },
       ],
-    declarations: [AppComponent, TruckComponent, MainComponent, HeaderComponent, EmployeeComponent, OurTeamComponent, QuoteBlockComponent, GeographyComponent, CompanyGroupComponent, ContactsComponent],
+    declarations: [AppComponent, TruckComponent, MainComponent, HeaderComponent, EmployeeComponent, OurTeamComponent, QuoteBlockComponent, GeographyComponent, CompanyGroupComponent, ContactsComponent, FooterComponent],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

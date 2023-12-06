@@ -41,3 +41,7 @@
     position: relative;
     top: -60px;
 }
+.row {
+    display: flex;
+    flex-direction: row;
+}

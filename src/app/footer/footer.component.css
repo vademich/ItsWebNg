@@ -1,0 +1,27 @@
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 30px;
+}
+.footer {
+    height: 214px;
+    background-color: #F5F6FB;;
+}
+hr {
+    border: 1;
+    margin: 0 0 0 0;
+}
+.box {
+    /* padding: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* .logo {
+    padding: 60px;
+    display: flex;
+    justify-content: space-around;
+} */
