@@ -9,40 +9,41 @@
             <div class="row">
 
                 <div class="col gilroy-24-400 black">
-                    <p>г. Воронеж, ул. Дорожная, 46</p>
-                    <p>8 (800) 55 008 55</p>
-                    <p>info@mtransservice.ru</p>
+                    <p class="str"><img src="../../assets/images/bxs_map.svg">г. Воронеж, ул. Дорожная, 46</p>
+                    <p class="str"><img src="../../assets/images/ic_round-phone.svg">8 (800) 55 008 55</p>
+                    <p class="str"><img src="../../assets/images/fluent_mail-16-filled.svg">info@mtransservice.ru</p>
                 </div>
 
-                <div class="col gilroy-14 black">
+                <div class="col-2 gilroy-14 black">
                     <p>Имея опыт не на словах, а на собственных компаниях, наша команда готова помочь вам с реализацией даже самых непростых задач!</p>
 
                     <form #form="ngForm">
-                        <mat-form-field>
-                            <mat-label>Ваше имя</mat-label>
-                            <input matInput name="name" [(ngModel)]="name" required>
+                        <mat-form-field class="form">
+                            <mat-label class="label">Ваше имя</mat-label>
+                            <input matInput name="name" [(ngModel)]="name">
                         </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Телефон</mat-label>
-                            <input matInput name="phone" [(ngModel)]="phone" required>
+                        <mat-form-field class="form">
+                            <mat-label class="label">Телефон</mat-label>
+                            <input matInput name="phone" [(ngModel)]="phone">
                         </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Почта</mat-label>
-                            <input matInput name="email" [(ngModel)]="email" required>
+                        <mat-form-field class="form">
+                            <mat-label class="label">Почта</mat-label>
+                            <input matInput name="email" [(ngModel)]="email">
                         </mat-form-field>     
                         <!-- <form #form="ngForm"> -->
-                        <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+                        <re-captcha  class="form" id="recaptcha" name="recaptcha" #recaptcha="ngModel" 
+                        [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
                         <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
                             <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
                         </div>
                         <!-- </form> -->
-                        <button mat-raised-button color="primary" (click)="submit(form)">Отправить</button>
+                        <button class="form button" (click)="submit(form)">Отправить</button>
                     </form>
 
                 </div>
 
                 <div>
-                    <img src="../../assets/images/map_image.png">
+                    <img class="map" src="../../assets/images/map_image.png">
                 </div>
 
             </div>
