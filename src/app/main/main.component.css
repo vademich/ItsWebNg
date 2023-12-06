@@ -43,6 +43,7 @@
 .wrapper{
     display: flex;
     flex-wrap: nowrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     position: absolute;
     top: 242px;

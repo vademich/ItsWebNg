@@ -1,11 +1,11 @@
-.screen {
-    padding-top: 260px;
-    padding-bottom: 120px;
-}
 .page {
     width: 100%;
     overflow: hidden;
-    margin: 60px;
+    /* padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 260px;
+    padding-bottom: 120px; */
+    background: #F5F6FB;
 }
 
 
@@ -17,5 +17,15 @@
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+
+img {
+    min-width: 200px;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+.content {
+    margin: 60px
 }

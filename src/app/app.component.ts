@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css', '../fonts/fonts.css']
 })
 export class AppComponent {
-  title = 'ItsWebNg';
 }

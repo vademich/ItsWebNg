@@ -18,6 +18,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 
+import { FormsModule } from '@angular/forms';
+import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
+
+import { environment } from 'src/environments/environment';
+
 @NgModule({
     imports: [
         BrowserModule, 
@@ -25,8 +30,19 @@ import { MatButtonModule } from '@angular/material/button';
         MatSlideToggleModule,
         MatInputModule,
         MatFormFieldModule,
-        MatButtonModule
+        MatButtonModule,
+        FormsModule,
+        RecaptchaFormsModule,
+        RecaptchaModule,
     ],
+    providers: [
+        {
+          provide: RECAPTCHA_SETTINGS,
+          useValue: {
+            siteKey: environment.recaptcha.siteKey,
+          } as RecaptchaSettings,
+        },
+      ],
     declarations: [AppComponent, TruckComponent, MainComponent, HeaderComponent, EmployeeComponent, OurTeamComponent, QuoteBlockComponent, GeographyComponent, CompanyGroupComponent, ContactsComponent],
     bootstrap: [AppComponent],
 })
