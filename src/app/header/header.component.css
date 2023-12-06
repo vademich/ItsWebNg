@@ -18,8 +18,17 @@
     font-style: normal;
     font-weight: 500;
     line-height: 22px;
+    display: flex;
+    align-items: center;
 
     margin: 0 24px;
+}
+a {
+    text-decoration: none;
+    color: #3A3A3A;
+}
+img {
+    margin-left: 30px;
 }
 .telephone{
     color: #050608;
