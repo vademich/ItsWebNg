@@ -59,6 +59,8 @@
             (mouseleave)="onPicture2()"
             (mouseenter)="onShadow2()"
             (mouseleave)="onShadow2()"
+            (mouseenter)="onDetails2()"
+            (mouseleave)="onDetails2()"
             [@hover]="block2Hover ? 'block2-end' : 'block2-start'"
             >
               <div class="title"
@@ -74,6 +76,9 @@
               <img class="shadow" src="../../assets/images/company-group/shadow.svg"
               [@hover]="shadow2Hover ? 'shadow-end' : 'shadow-start'"
               >
+              <div class="more-details"
+              [@hover]="details2Hover ? 'details-end' : 'details-start'"
+              ></div>
 
               <div class="circle2"
               [@hover]="circle2Hover ? 'circle2-end' : 'circle2-start'"

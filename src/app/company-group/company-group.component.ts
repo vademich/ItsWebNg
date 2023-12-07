@@ -50,6 +50,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         opacity: 1,
         'border-radius': '120px',
       })),
+      state('details-start',
+      style({
+        background: 'url(../../assets/images/more-details-gray.svg) no-repeat center,rgba(58, 58, 58, 0.05)'
+      })),
+      state('details-end',
+      style({
+        background: 'url(../../assets/images/more-details-white.svg) no-repeat center right 10px,rgba(255, 255, 255, 0.15)'
+      })),
+      // 
+      // 
       // 
       state('block3-start',
       style({'background-color': '#FFF'})),
@@ -202,10 +212,11 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       state('picture-start',
       style({
+        transform: 'scale(0.8)'
       })),
       state('picture-end',
       style({
-        transform: 'rotate(-8deg) scale(1.1)',
+        transform: 'rotate(-8deg) scale(0.9)',
       })),
       state('shadow-start',
       style({
@@ -262,6 +273,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('picture-end => picture-start', [animate('0.3s ease-out')]),
       transition('shadow-start => shadow-end', [animate('0.3s ease-out')]),
       transition('shadow-end => shadow-start', [animate('0.3s ease-out')]),
+      transition('details-start => details-end', [animate('0.3s ease-out')]),
+      transition('details-end => details-start', [animate('0.3s ease-out')])
     ])
   ],
   templateUrl: './company-group.component.html',
@@ -475,4 +488,8 @@ export class CompanyGroupComponent {
     this.shadow8Hover = !this.shadow8Hover;
   }
   // 
+  details2Hover = false;
+  onDetails2() {
+    this.details2Hover = !this.details2Hover;
+  }
 }
