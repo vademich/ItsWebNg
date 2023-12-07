@@ -1,10 +1,8 @@
 .screen {
   width: 1440px;
-  /* height: 100%; */
   overflow: hidden;
   background: #FBFBFD;
-  padding-top: 120px;
-  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 .padding-right-30 {
@@ -13,14 +11,13 @@
 .padding-left-30 {
     padding-left: 30px;
 }
-/*  */
+
 .line {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
     padding: 60px;
-    margin: 60px;
   }
   
   .blue-letters{
@@ -48,7 +45,9 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: top;
-      margin: 30px 60px 30px 30px;
+      margin: 20px;
+      padding-left: 60px;
+      padding-right: 60px;
   }
   .column{
       display: flex;
@@ -69,27 +68,33 @@
     width: 54px;
     height: 54px;
     background: url(../../assets/images/arrow_L.svg);
+    background-repeat: no-repeat;
     z-index: 500;
     position: absolute;
     left: -12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
   }
   .arrow-left:hover{
     background: url(../../assets/images/arrow_L_act.svg);
+    background-repeat: no-repeat;
   }
   .arrow-right{
     width: 54px;
     height: 54px;
     background: url(../../assets/images/arrow_R.svg);
+    background-repeat: no-repeat;
     z-index: 500;
     position: absolute;
     right: -12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
   }
   .arrow-right:hover{
     background: url(../../assets/images/arrow_R_act.svg);
+    background-repeat: no-repeat;
   }
