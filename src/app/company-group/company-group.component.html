@@ -9,284 +9,287 @@
         <img class="up" src="../../assets/images/company-group/group.svg">
       </div>
       
-      <div class="line top-line">
+      <div class="wrapper">
+        <div class="line">
+
+            <div class="block"
+            (mouseenter)="onBlock()"
+            (mouseleave)="onBlock()"
+            (mouseenter)="onCircle()"
+            (mouseleave)="onCircle()"
+            (mouseenter)="onTitle()"
+            (mouseleave)="onTitle()"
+            (mouseenter)="onText()"
+            (mouseleave)="onText()"
+            (mouseenter)="onPicture()"
+            (mouseleave)="onPicture()"
+            (mouseenter)="onShadow()"
+            (mouseleave)="onShadow()"
+            [@hover]="blockHover ? 'block-end' : 'block-start'"
+            >
+              <div class="title"
+              [@hover]="titleHover ? 'title-end' : 'title-start'"
+              >ITS</div>
+              <div class="text"
+              [@hover]="textHover ? 'text-end' : 'text-start'"
+              >консалтинг и управление <br>группой компаний</div>
+              
+              <img class="picture" src="../../assets/images/company-group/ITS.svg"
+              [@hover]="pictureHover ? 'picture-end' : 'picture-start'"
+              >
+              <img class="shadow" src="../../assets/images/company-group/shadow.svg"
+              [@hover]="shadowHover ? 'shadow-end' : 'shadow-start'"
+              >
+
+              <div class="circle"
+              [@hover]="circleHover ? 'circle-end' : 'circle-start'"
+              ></div>
+            </div>
+            
+            <div class="block"
+            (mouseenter)="onBlock2()"
+            (mouseleave)="onBlock2()"
+            (mouseenter)="onCircle2()"
+            (mouseleave)="onCircle2()"
+            (mouseenter)="onTitle2()"
+            (mouseleave)="onTitle2()"
+            (mouseenter)="onText2()"
+            (mouseleave)="onText2()"
+            (mouseenter)="onPicture2()"
+            (mouseleave)="onPicture2()"
+            (mouseenter)="onShadow2()"
+            (mouseleave)="onShadow2()"
+            [@hover]="block2Hover ? 'block2-end' : 'block2-start'"
+            >
+              <div class="title"
+              [@hover]="title2Hover ? 'title-end' : 'title-start'"
+              >Development</div>
+              <div class="text"
+              [@hover]="text2Hover ? 'text-end' : 'text-start'"
+              >недвижимость <br>и аренда</div>
+              
+              <img class="picture" src="../../assets/images/company-group/MTS.svg"
+              [@hover]="picture2Hover ? 'picture-end' : 'picture-start'"
+              >
+              <img class="shadow" src="../../assets/images/company-group/shadow.svg"
+              [@hover]="shadow2Hover ? 'shadow-end' : 'shadow-start'"
+              >
+
+              <div class="circle2"
+              [@hover]="circle2Hover ? 'circle2-end' : 'circle2-start'"
+              ></div>
+            </div>
 
           <div class="block"
-          (mouseenter)="onBlock()"
-          (mouseleave)="onBlock()"
-          (mouseenter)="onCircle()"
-          (mouseleave)="onCircle()"
-          (mouseenter)="onTitle()"
-          (mouseleave)="onTitle()"
-          (mouseenter)="onText()"
-          (mouseleave)="onText()"
-          (mouseenter)="onPicture()"
-          (mouseleave)="onPicture()"
-          (mouseenter)="onShadow()"
-          (mouseleave)="onShadow()"
-          [@hover]="blockHover ? 'block-end' : 'block-start'"
+          (mouseenter)="onBlock3()"
+          (mouseleave)="onBlock3()"
+          (mouseenter)="onCircle3()"
+          (mouseleave)="onCircle3()"
+          (mouseenter)="onTitle3()"
+          (mouseleave)="onTitle3()"
+          (mouseenter)="onText3()"
+          (mouseleave)="onText3()"
+          (mouseenter)="onPicture3()"
+          (mouseleave)="onPicture3()"
+          (mouseenter)="onShadow3()"
+          (mouseleave)="onShadow3()"
+          [@hover]="block3Hover ? 'block3-end' : 'block3-start'"
           >
             <div class="title"
-            [@hover]="titleHover ? 'title-end' : 'title-start'"
-            >ITS</div>
+            [@hover]="title3Hover ? 'title-end' : 'title-start'"
+            >Агрегатор</div>
             <div class="text"
-            [@hover]="textHover ? 'text-end' : 'text-start'"
-            >консалтинг и управление <br>группой компаний</div>
+            [@hover]="text3Hover ? 'text-end' : 'text-start'"
+            >автомобильного <br>сервиса</div>
             
-            <img class="picture" src="../../assets/images/company-group/ITS.svg"
-            [@hover]="pictureHover ? 'picture-end' : 'picture-start'"
+            <img class="picture" src="../../assets/images/company-group/M3.svg"
+            [@hover]="picture3Hover ? 'picture-end' : 'picture-start'"
             >
             <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-            [@hover]="shadowHover ? 'shadow-end' : 'shadow-start'"
+            [@hover]="shadow3Hover ? 'shadow-end' : 'shadow-start'"
             >
 
-            <div class="circle"
-            [@hover]="circleHover ? 'circle-end' : 'circle-start'"
-            ></div>
-          </div>
-          
-          <div class="block"
-          (mouseenter)="onBlock2()"
-          (mouseleave)="onBlock2()"
-          (mouseenter)="onCircle2()"
-          (mouseleave)="onCircle2()"
-          (mouseenter)="onTitle2()"
-          (mouseleave)="onTitle2()"
-          (mouseenter)="onText2()"
-          (mouseleave)="onText2()"
-          (mouseenter)="onPicture2()"
-          (mouseleave)="onPicture2()"
-          (mouseenter)="onShadow2()"
-          (mouseleave)="onShadow2()"
-          [@hover]="block2Hover ? 'block2-end' : 'block2-start'"
-          >
-            <div class="title"
-            [@hover]="title2Hover ? 'title-end' : 'title-start'"
-            >Development</div>
-            <div class="text"
-            [@hover]="text2Hover ? 'text-end' : 'text-start'"
-            >недвижимость <br>и аренда</div>
-            
-            <img class="picture" src="../../assets/images/company-group/MTS.svg"
-            [@hover]="picture2Hover ? 'picture-end' : 'picture-start'"
-            >
-            <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-            [@hover]="shadow2Hover ? 'shadow-end' : 'shadow-start'"
-            >
-
-            <div class="circle2"
-            [@hover]="circle2Hover ? 'circle2-end' : 'circle2-start'"
+            <div class="circle3"
+            [@hover]="circle3Hover ? 'circle3-end' : 'circle3-start'"
             ></div>
           </div>
 
-        <div class="block"
-        (mouseenter)="onBlock3()"
-        (mouseleave)="onBlock3()"
-        (mouseenter)="onCircle3()"
-        (mouseleave)="onCircle3()"
-        (mouseenter)="onTitle3()"
-        (mouseleave)="onTitle3()"
-        (mouseenter)="onText3()"
-        (mouseleave)="onText3()"
-        (mouseenter)="onPicture3()"
-        (mouseleave)="onPicture3()"
-        (mouseenter)="onShadow3()"
-        (mouseleave)="onShadow3()"
-        [@hover]="block3Hover ? 'block3-end' : 'block3-start'"
-        >
-          <div class="title"
-          [@hover]="title3Hover ? 'title-end' : 'title-start'"
-          >Агрегатор</div>
-          <div class="text"
-          [@hover]="text3Hover ? 'text-end' : 'text-start'"
-          >автомобильного <br>сервиса</div>
-          
-          <img class="picture" src="../../assets/images/company-group/M3.svg"
-          [@hover]="picture3Hover ? 'picture-end' : 'picture-start'"
-          >
-          <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-          [@hover]="shadow3Hover ? 'shadow-end' : 'shadow-start'"
-          >
+            <div class="block"
+            (mouseenter)="onBlock4()"
+            (mouseleave)="onBlock4()"
+            (mouseenter)="onCircle4()"
+            (mouseleave)="onCircle4()"
+            (mouseenter)="onTitle4()"
+            (mouseleave)="onTitle4()"
+            (mouseenter)="onText4()"
+            (mouseleave)="onText4()"
+            (mouseenter)="onPicture4()"
+            (mouseleave)="onPicture4()"
+            (mouseenter)="onShadow4()"
+            (mouseleave)="onShadow4()"
+            [@hover]="block4Hover ? 'block4-end' : 'block4-start'"
+            >
+              <div class="title"
+              [@hover]="title4Hover ? 'title-end' : 'title-start'"
+              >Строительство</div>
+              <div class="text"
+              [@hover]="text4Hover ? 'text-end' : 'text-start'"
+              >капитальные и некапитальные <br>сооружения</div>
+              
+              <img class="picture" src="../../assets/images/company-group/MIR_STROY.svg"
+              [@hover]="picture4Hover ? 'picture-end' : 'picture-start'"
+              >
+              <img class="shadow" src="../../assets/images/company-group/shadow.svg"
+              [@hover]="shadow4Hover ? 'shadow-end' : 'shadow-start'"
+              >
 
-          <div class="circle3"
-          [@hover]="circle3Hover ? 'circle3-end' : 'circle3-start'"
-          ></div>
+              <div class="circle4"
+              [@hover]="circle4Hover ? 'circle4-end' : 'circle4-start'"
+              ></div>
+            </div>
+
         </div>
 
+        <div class="line">
+
           <div class="block"
-          (mouseenter)="onBlock4()"
-          (mouseleave)="onBlock4()"
-          (mouseenter)="onCircle4()"
-          (mouseleave)="onCircle4()"
-          (mouseenter)="onTitle4()"
-          (mouseleave)="onTitle4()"
-          (mouseenter)="onText4()"
-          (mouseleave)="onText4()"
-          (mouseenter)="onPicture4()"
-          (mouseleave)="onPicture4()"
-          (mouseenter)="onShadow4()"
-          (mouseleave)="onShadow4()"
-          [@hover]="block4Hover ? 'block4-end' : 'block4-start'"
+          (mouseenter)="onBlock5()"
+          (mouseleave)="onBlock5()"
+          (mouseenter)="onCircle5()"
+          (mouseleave)="onCircle5()"
+          (mouseenter)="onTitle5()"
+          (mouseleave)="onTitle5()"
+          (mouseenter)="onText5()"
+          (mouseleave)="onText5()"
+          (mouseenter)="onPicture5()"
+          (mouseleave)="onPicture5()"
+          (mouseenter)="onShadow5()"
+          (mouseleave)="onShadow5()"
+          [@hover]="block5Hover ? 'block5-end' : 'block5-start'"
           >
             <div class="title"
-            [@hover]="title4Hover ? 'title-end' : 'title-start'"
-            >Строительство</div>
+            [@hover]="title5Hover ? 'title-end' : 'title-start'"
+            >IT</div>
             <div class="text"
-            [@hover]="text4Hover ? 'text-end' : 'text-start'"
-            >капитальные и некапитальные <br>сооружения</div>
+            [@hover]="text5Hover ? 'text-end' : 'text-start'"
+            >аккредитованная <br>минцифрой</div>
             
-            <img class="picture" src="../../assets/images/company-group/MIR_STROY.svg"
-            [@hover]="picture4Hover ? 'picture-end' : 'picture-start'"
+            <img class="picture" src="../../assets/images/company-group/IT.svg"
+            [@hover]="picture5Hover ? 'picture-end' : 'picture-start'"
             >
             <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-            [@hover]="shadow4Hover ? 'shadow-end' : 'shadow-start'"
+            [@hover]="shadow5Hover ? 'shadow-end' : 'shadow-start'"
             >
 
-            <div class="circle4"
-            [@hover]="circle4Hover ? 'circle4-end' : 'circle4-start'"
+            <div class="circle5"
+            [@hover]="circle5Hover ? 'circle5-end' : 'circle5-start'"
             ></div>
           </div>
 
+          <div class="block"
+          (mouseenter)="onBlock6()"
+          (mouseleave)="onBlock6()"
+          (mouseenter)="onCircle6()"
+          (mouseleave)="onCircle6()"
+          (mouseenter)="onTitle6()"
+          (mouseleave)="onTitle6()"
+          (mouseenter)="onText6()"
+          (mouseleave)="onText6()"
+          (mouseenter)="onPicture6()"
+          (mouseleave)="onPicture6()"
+          (mouseenter)="onShadow6()"
+          (mouseleave)="onShadow6()"
+          [@hover]="block6Hover ? 'block6-end' : 'block6-start'"
+          >
+            <div class="title"
+            [@hover]="title6Hover ? 'title-end' : 'title-start'"
+            >Сеть ПК</div>
+            <div class="text"
+            [@hover]="text6Hover ? 'text-end' : 'text-start'"
+            >придорожный сервис</div>
+            
+            <img class="picture" src="../../assets/images/company-group/PK.svg"
+            [@hover]="picture6Hover ? 'picture-end' : 'picture-start'"
+            >
+            <img class="shadow" src="../../assets/images/company-group/shadow.svg"
+            [@hover]="shadow6Hover ? 'shadow-end' : 'shadow-start'"
+            >
+
+            <div class="circle6"
+            [@hover]="circle6Hover ? 'circle6-end' : 'circle6-start'"
+            ></div>
+          </div>
+
+          <div class="block"
+          (mouseenter)="onBlock7()"
+          (mouseleave)="onBlock7()"
+          (mouseenter)="onCircle7()"
+          (mouseleave)="onCircle7()"
+          (mouseenter)="onTitle7()"
+          (mouseleave)="onTitle7()"
+          (mouseenter)="onText7()"
+          (mouseleave)="onText7()"
+          (mouseenter)="onPicture7()"
+          (mouseleave)="onPicture7()"
+          (mouseenter)="onShadow7()"
+          (mouseleave)="onShadow7()"
+          [@hover]="block7Hover ? 'block7-end' : 'block7-start'"
+          >
+            <div class="title"
+            [@hover]="title7Hover ? 'title-end' : 'title-start'"
+            >Капитал</div>
+            <div class="text"
+            [@hover]="text7Hover ? 'text-end' : 'text-start'"
+            >бухгалтерия, налоги, <br>аудит, безопасность</div>
+            
+            <img class="picture" src="../../assets/images/company-group/KAPITAL.svg"
+            [@hover]="picture7Hover ? 'picture-end' : 'picture-start'"
+            >
+            <img class="shadow" src="../../assets/images/company-group/shadow.svg"
+            [@hover]="shadow7Hover ? 'shadow-end' : 'shadow-start'"
+            >
+
+            <div class="circle7"
+            [@hover]="circle7Hover ? 'circle7-end' : 'circle7-start'"
+            ></div>
+          </div>
+
+          <div class="block"
+          (mouseenter)="onBlock8()"
+          (mouseleave)="onBlock8()"
+          (mouseenter)="onCircle8()"
+          (mouseleave)="onCircle8()"
+          (mouseenter)="onTitle8()"
+          (mouseleave)="onTitle8()"
+          (mouseenter)="onText8()"
+          (mouseleave)="onText8()"
+          (mouseenter)="onPicture8()"
+          (mouseleave)="onPicture8()"
+          (mouseenter)="onShadow8()"
+          (mouseleave)="onShadow8()"
+          [@hover]="block8Hover ? 'block8-end' : 'block8-start'"
+          >
+            <div class="title"
+            [@hover]="title8Hover ? 'title-end' : 'title-start'"
+            >Тендеры</div>
+            <div class="text"
+            [@hover]="text8Hover ? 'text-end' : 'text-start'"
+            >тендеры и договора</div>
+            
+            <img class="picture" src="../../assets/images/company-group/TENDER.svg"
+            [@hover]="picture8Hover ? 'picture-end' : 'picture-start'"
+            >
+            <img class="shadow" src="../../assets/images/company-group/shadow.svg"
+            [@hover]="shadow8Hover ? 'shadow-end' : 'shadow-start'"
+            >
+
+            <div class="circle8"
+            [@hover]="circle8Hover ? 'circle8-end' : 'circle8-start'"
+            ></div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="line bottom-line">
-
-        <div class="block"
-        (mouseenter)="onBlock5()"
-        (mouseleave)="onBlock5()"
-        (mouseenter)="onCircle5()"
-        (mouseleave)="onCircle5()"
-        (mouseenter)="onTitle5()"
-        (mouseleave)="onTitle5()"
-        (mouseenter)="onText5()"
-        (mouseleave)="onText5()"
-        (mouseenter)="onPicture5()"
-        (mouseleave)="onPicture5()"
-        (mouseenter)="onShadow5()"
-        (mouseleave)="onShadow5()"
-        [@hover]="block5Hover ? 'block5-end' : 'block5-start'"
-        >
-          <div class="title"
-          [@hover]="title5Hover ? 'title-end' : 'title-start'"
-          >IT</div>
-          <div class="text"
-          [@hover]="text5Hover ? 'text-end' : 'text-start'"
-          >аккредитованная <br>минцифрой</div>
-          
-          <img class="picture" src="../../assets/images/company-group/IT.svg"
-          [@hover]="picture5Hover ? 'picture-end' : 'picture-start'"
-          >
-          <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-          [@hover]="shadow5Hover ? 'shadow-end' : 'shadow-start'"
-          >
-
-          <div class="circle5"
-          [@hover]="circle5Hover ? 'circle5-end' : 'circle5-start'"
-          ></div>
-        </div>
-
-        <div class="block"
-        (mouseenter)="onBlock6()"
-        (mouseleave)="onBlock6()"
-        (mouseenter)="onCircle6()"
-        (mouseleave)="onCircle6()"
-        (mouseenter)="onTitle6()"
-        (mouseleave)="onTitle6()"
-        (mouseenter)="onText6()"
-        (mouseleave)="onText6()"
-        (mouseenter)="onPicture6()"
-        (mouseleave)="onPicture6()"
-        (mouseenter)="onShadow6()"
-        (mouseleave)="onShadow6()"
-        [@hover]="block6Hover ? 'block6-end' : 'block6-start'"
-        >
-          <div class="title"
-          [@hover]="title6Hover ? 'title-end' : 'title-start'"
-          >Сеть ПК</div>
-          <div class="text"
-          [@hover]="text6Hover ? 'text-end' : 'text-start'"
-          >придорожный сервис</div>
-          
-          <img class="picture" src="../../assets/images/company-group/PK.svg"
-          [@hover]="picture6Hover ? 'picture-end' : 'picture-start'"
-          >
-          <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-          [@hover]="shadow6Hover ? 'shadow-end' : 'shadow-start'"
-          >
-
-          <div class="circle6"
-          [@hover]="circle6Hover ? 'circle6-end' : 'circle6-start'"
-          ></div>
-        </div>
-
-        <div class="block"
-        (mouseenter)="onBlock7()"
-        (mouseleave)="onBlock7()"
-        (mouseenter)="onCircle7()"
-        (mouseleave)="onCircle7()"
-        (mouseenter)="onTitle7()"
-        (mouseleave)="onTitle7()"
-        (mouseenter)="onText7()"
-        (mouseleave)="onText7()"
-        (mouseenter)="onPicture7()"
-        (mouseleave)="onPicture7()"
-        (mouseenter)="onShadow7()"
-        (mouseleave)="onShadow7()"
-        [@hover]="block7Hover ? 'block7-end' : 'block7-start'"
-        >
-          <div class="title"
-          [@hover]="title7Hover ? 'title-end' : 'title-start'"
-          >Капитал</div>
-          <div class="text"
-          [@hover]="text7Hover ? 'text-end' : 'text-start'"
-          >бухгалтерия, налоги, <br>аудит, безопасность</div>
-          
-          <img class="picture" src="../../assets/images/company-group/KAPITAL.svg"
-          [@hover]="picture7Hover ? 'picture-end' : 'picture-start'"
-          >
-          <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-          [@hover]="shadow7Hover ? 'shadow-end' : 'shadow-start'"
-          >
-
-          <div class="circle7"
-          [@hover]="circle7Hover ? 'circle7-end' : 'circle7-start'"
-          ></div>
-        </div>
-
-        <div class="block"
-        (mouseenter)="onBlock8()"
-        (mouseleave)="onBlock8()"
-        (mouseenter)="onCircle8()"
-        (mouseleave)="onCircle8()"
-        (mouseenter)="onTitle8()"
-        (mouseleave)="onTitle8()"
-        (mouseenter)="onText8()"
-        (mouseleave)="onText8()"
-        (mouseenter)="onPicture8()"
-        (mouseleave)="onPicture8()"
-        (mouseenter)="onShadow8()"
-        (mouseleave)="onShadow8()"
-        [@hover]="block8Hover ? 'block8-end' : 'block8-start'"
-        >
-          <div class="title"
-          [@hover]="title8Hover ? 'title-end' : 'title-start'"
-          >Тендеры</div>
-          <div class="text"
-          [@hover]="text8Hover ? 'text-end' : 'text-start'"
-          >тендеры и договора</div>
-          
-          <img class="picture" src="../../assets/images/company-group/TENDER.svg"
-          [@hover]="picture8Hover ? 'picture-end' : 'picture-start'"
-          >
-          <img class="shadow" src="../../assets/images/company-group/shadow.svg"
-          [@hover]="shadow8Hover ? 'shadow-end' : 'shadow-start'"
-          >
-
-          <div class="circle8"
-          [@hover]="circle8Hover ? 'circle8-end' : 'circle8-start'"
-          ></div>
-        </div>
-
-      </div>
   </div>
 </div>

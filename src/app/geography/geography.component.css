@@ -2,6 +2,8 @@
     width: 1440px;
     overflow: hidden;
     background-color: #F5F6FB;
+}
+.flags{
     padding: 60px;
 }
 img {
@@ -15,6 +17,6 @@ img {
 .col {
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
-    padding-bottom: 30px;
+    margin: 20px;
+    padding: 0 60px;
 }
