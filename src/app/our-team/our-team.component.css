@@ -1,5 +1,5 @@
 .screen {
-  width: 100%;
+  width: 1440px;
   /* height: 100%; */
   overflow: hidden;
   background: #FBFBFD;
@@ -71,7 +71,7 @@
     background: url(../../assets/images/arrow_L.svg);
     z-index: 500;
     position: absolute;
-    left: 38px;
+    left: -12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,7 @@
     background: url(../../assets/images/arrow_R.svg);
     z-index: 500;
     position: absolute;
-    right: 38px;
+    right: -12px;
     display: flex;
     justify-content: center;
     align-items: center;

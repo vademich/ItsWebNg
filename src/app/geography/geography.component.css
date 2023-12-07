@@ -1,12 +1,12 @@
 .screen {
-    width: 100%;
+    width: 1440px;
     overflow: hidden;
     background-color: #F5F6FB;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px;
 }
 img {
     width: 250px;
+    padding: 20px;
 }
 .first, .second {
     display: flex;

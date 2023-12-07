@@ -1,5 +1,6 @@
+
 .main{
-    width: 100%;
+    width: 1440px;
     height: 675px;
     background: #F5F6FB;
     padding-bottom: 120px;
@@ -8,7 +9,8 @@
     width: 379px;
     height: 468px;
     position: relative;
-    top: 80px;
+    /* top: 80px; */
+    top: 160px;
     left: 56px;
     flex-shrink: 0;
 
@@ -41,13 +43,20 @@
 }
 
 .wrapper{
+    /* padding: 0 calc((100% - 1440) / 2); */
+    width: 1070px;
+    position: relative;
+    top: -250px;
+    left: 314px;
+
     display: flex;
     flex-wrap: nowrap;
     /* flex-wrap: wrap; */
     justify-content: space-between;
-    position: absolute;
+    /* position: absolute;
     top: 242px;
     left: 314px;
+    left: 540px; */
     background-repeat: no-repeat;
     /* width: calc(100% - 490px);
     overflow: hidden; */
