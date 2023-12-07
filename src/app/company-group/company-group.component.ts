@@ -491,5 +491,29 @@ export class CompanyGroupComponent {
   details2Hover = false;
   onDetails2() {
     this.details2Hover = !this.details2Hover;
+  } 
+  details3Hover = false;
+  onDetails3() {
+    this.details3Hover = !this.details3Hover;
+  } 
+  details4Hover = false;
+  onDetails4() {
+    this.details4Hover = !this.details4Hover;
+  } 
+  details5Hover = false;
+  onDetails5() {
+    this.details5Hover = !this.details5Hover;
+  } 
+  details6Hover = false;
+  onDetails6() {
+    this.details6Hover = !this.details6Hover;
+  } 
+  details7Hover = false;
+  onDetails7() {
+    this.details7Hover = !this.details7Hover;
+  } 
+  details8Hover = false;
+  onDetails8() {
+    this.details8Hover = !this.details8Hover;
   }
 }
