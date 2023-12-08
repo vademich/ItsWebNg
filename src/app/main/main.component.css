@@ -220,7 +220,8 @@
     top: -130px;
     left: 32px;
     /* width: 360px; */
-    width: calc(740px - (800px - 100%));
+    /* width: calc(740px - (800px - 100%)); */
+    width: calc(100% - 60px);
     height: 351px;
   }
   .wrapper{

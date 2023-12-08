@@ -1,59 +1,145 @@
-.screen {
-    width: 1440px;
-    /* height: 100%; */
-    overflow: hidden;
-    background: #FBFBFD;
-    padding-top: 120px;
-    padding-bottom: 60px;
+/* Common */
+@media screen {
+    .gilroy-24 {
+        font-family: Gilroy;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+    }
+    .gilroy-16 {
+        font-family: Gilroy;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 0 20px;
+        width: 545px;
+        height: 110px;
+    }
+    .gilroy-48 {
+        font-family: Gilroy;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 46px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 30px;
+    }
+    .black {
+        color: #3A3A3A;
+    }
+    .blue {
+        color: #002ED0;
+    }
+    .padding-right-30 {
+        padding-right: 30px;
+    }
+    .padding-left-30 {
+        padding-left: 30px;
+    }
+    .padding-right-16 {
+        padding-right: 16px;
+    }
+    .padding-left-16 {
+        padding-left: 16px;
+    }
+    .gray-letters {
+        font-family: Gilroy;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #CED0E2;
+        display: flex;
+        justify-content: space-between;
+    }
+    .word {
+        padding: 0 10px;
+    }
+    .wrapper {
+        width: calc(100% - 60px);
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
 }
-.page {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    padding-top: 60px;
+
+
+/* Monitors */
+@media (min-width: 800px) {
+    .mobile-screen {
+        display: none;
+    }
+    .screen {
+        width: 1440px;
+        /* height: 100%; */
+        overflow: hidden;
+        background: #FBFBFD;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+    .page {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        padding-top: 60px;
+    }
+    .truck {
+        width: 1030px;
+        height: 540px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+    .light {
+        width: 1030px;
+        height: 540px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+    .gray-letters {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 50px;
+    }
 }
-.truck {
-    width: 1030px;
-    height: 540px;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-}
-.light {
-    width: 1030px;
-    height: 540px;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-}
-.gilroy-16 {
-    font-family: Gilroy;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
-    padding: 0 20px;
-    width: 545px;
-    height: 110px;
-}
-.gilroy-48 {
-    font-family: Gilroy;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 46px;
-    letter-spacing: 0em;
-    text-align: left;
-    padding: 30px;
-}
-.black {
-    color: #3A3A3A;
-}
-.blue {
-    color: #002ED0;
-}
-.padding-right-30 {
-    padding-right: 30px;
-}
-.padding-left-30 {
-    padding-left: 30px;
+
+
+/* Mobile */
+@media (max-width: 800px) {
+    .screen {
+        display: none;
+    }
+    .mobile-screen {
+        overflow: hidden;
+    }
+    .page {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        padding-top: 60px;
+    }
+    .truck {
+        width: 1030px;
+        height: 540px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+    .light {
+        width: 1030px;
+        height: 540px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+    .gray-letters {
+        font-size: calc((100vw - 800px) / 250 + 24px);
+        /* font-size: 24px; */
+        font-weight: 500;
+        line-height: 30px;
+    }
+    .block {
+        width: 341px;
+    }
 }

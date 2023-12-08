@@ -38,29 +38,11 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       style({
         'transform': 'translateX(0px)',
         'opacity': '1',
-        'font-family': 'Gilroy',
-        'font-size': '48px',
-        'font-weight': '600',
-        'line-height': '50px',
-        'letter-spacing': '0em',
-        'text-align': 'left',
-        'color': '#CED0E2',
-        'display': 'flex',
-        'justify-content': 'space-between'
       })),
       state('start',
       style({
         'transform': 'translateX(400px)',
         'opacity': '0',
-        'font-family': 'Gilroy',
-        'font-size': '48px',
-        'font-weight': '600',
-        'line-height': '50px',
-        'letter-spacing': '0em',
-        'text-align': 'left',
-        'color': '#CED0E2',
-        'display': 'flex',
-        'justify-content': 'space-between'
       })),
       transition('start => move-from-right', [animate('1s ease-out')])
     ]),
@@ -69,29 +51,11 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       style({
         'transform': 'translateX(0px)',
         'opacity': '1',
-        'font-family': 'Gilroy',
-        'font-size': '48px',
-        'font-weight': '600',
-        'line-height': '50px',
-        'letter-spacing': '0em',
-        'text-align': 'left',
-        'color': '#CED0E2',
-        'display': 'flex',
-        'justify-content': 'space-between'
       })),
       state('start',
       style({
         'transform': 'translateX(-400px)',
         'opacity': '0',
-        'font-family': 'Gilroy',
-        'font-size': '48px',
-        'font-weight': '600',
-        'line-height': '50px',
-        'letter-spacing': '0em',
-        'text-align': 'left',
-        'color': '#CED0E2',
-        'display': 'flex',
-        'justify-content': 'space-between'
       })),
       transition('start => move-from-left', [animate('1s ease-out')])
     ])

@@ -4,25 +4,65 @@
     </div>
 
     <div class="padding-right-30 padding-left-30" (mouseenter)="moveLetters()">
-        <div [@lettersFirst]="lettersHover ? 'move-from-right' : 'start'">
-            <span>Свобода </span>
-            <span>Поддержка </span>
-            <span>Развитие </span>
-            <span>Польза </span>
-            <span>Трансформация </span>
+        <div class="gray-letters" [@lettersFirst]="lettersHover ? 'move-from-right' : 'start'">
+            <span class="word">Свобода </span>
+            <span class="word">Поддержка </span>
+            <span class="word">Развитие </span>
+            <span class="word">Польза </span>
+            <span class="word">Трансформация </span>
         </div>
-        <div [@lettersSecond]="lettersHover ? 'move-from-left' : 'start'">
-            <span>Риски </span>
-            <span>Объединение </span>
-            <span>Созидание </span>
-            <span>Преодоление </span>
-            <span>Победы </span>
+        <div class="gray-letters" [@lettersSecond]="lettersHover ? 'move-from-left' : 'start'">
+            <span class="word">Риски </span>
+            <span class="word">Объединение </span>
+            <span class="word">Созидание </span>
+            <span class="word">Преодоление </span>
+            <span class="word">Победы </span>
         </div>
     </div>
 
     <div class="page" (mouseenter)="moveTruck()">
 
         <app-quote-block [text]="text"></app-quote-block>
+
+        <div class="truck padding-right-30"
+            [@truckHover]="isTruckHover ? 'truckFinish' : 'truckStart'">
+            <div class="light"
+                [@lightHover]="isLightHover ? 'on' : 'off'"
+                (mouseenter)="lightOnOff()"
+                (mouseleave)="lightOnOff()">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mobile-screen">
+
+    <div class="gilroy-24">
+        <span class="blue">Наш бизнес </span><span class="black">- это:</span>
+    </div>
+
+    <div class="wrapper" (mouseenter)="moveLetters()">
+        <div class="gray-letters" [@lettersFirst]="lettersHover ? 'move-from-right' : 'start'">
+            <span class="word">Свобода </span>
+            <span class="word">Поддержка </span>
+            <span class="word">Развитие </span>
+            <span class="word">Польза </span>
+            <span class="word">Трансформация </span>
+        </div>
+        <div class="gray-letters" [@lettersSecond]="lettersHover ? 'move-from-left' : 'start'">
+            <span class="word">Риски </span>
+            <span class="word">Объединение </span>
+            <span class="word">Созидание </span>
+            <span class="word">Преодоление </span>
+            <span class="word">Победы </span>
+        </div>
+    </div>
+
+    <div class="page" (mouseenter)="moveTruck()">
+
+        <div class="block">
+            <app-quote-block [text]="text"></app-quote-block>
+        </div>
 
         <div class="truck padding-right-30"
             [@truckHover]="isTruckHover ? 'truckFinish' : 'truckStart'">
