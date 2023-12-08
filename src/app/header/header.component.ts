@@ -8,7 +8,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state('menu-open',
       style({
         height: '812px',
-        opacity: 1
+        display: 'flex',
+        'flex-direction': 'column',
+        opacity: 1,
       })),
       state('menu-close',
       style({
