@@ -1,3 +1,4 @@
+/* Common */
 
 a {
     text-decoration: none;
@@ -6,45 +7,50 @@ a {
 a:hover {
     color: #002ED0;
 }
-img {
-    margin-left: 30px;
-}
-.header{
-    position: fixed;
-    width: 100%;
-    background: #FBFBFD;
-    box-shadow: #CACACA 1px 0 5px;
-    z-index: 900;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.header-component{
-    color: #3A3A3A;
-    font-family: Gilroy;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-}
-.telephone{
-    color: #050608;
-}
 
-@media screen and (min-width: 1238px) {
+/* Monitors */
+
+@media (min-width: 800px) {
+    .mobile-header {
+        display: none;
+    }
+    img {
+        margin-left: 30px;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+        background: #FBFBFD;
+        box-shadow: #CACACA 1px 0 5px;
+        z-index: 900;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-component{
+        color: #3A3A3A;
+        font-family: Gilroy;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+    }
+    .telephone{
+        color: #050608;
+    }
+}
+@media (min-width: 800px) {
     .header{
         height: 99px;
-    }
-    .gap-1{
-        padding-left: calc((100% - 1440px) / 2 + 50px);
-        padding-right: 200px;
     }
     .gap-2{
         padding-right: calc((100% - 1440px) / 2 + 50px);
     }
     .header-component{
-        font-size: 20px;
+        font-size: calc((100vw - 800px) / (1920 - 800) * (22 - 12) + 12px);
+
         font-weight: 500;
         line-height: 22px;
         margin: 0 24px;
@@ -53,58 +59,93 @@ img {
         font-weight: 600;
     }
 }
-@media screen and (max-width: 1237px) {
-    .header{
-        height: 99px;
-    }
+@media (min-width: 1440px) {
     .gap-1{
-        padding-left: calc((100% - 1440px) / 2);
-        padding-right: 150px;
-    }
-    .gap-2{
-        padding-right: calc((100% - 1440px) / 2);
-    }
-    .header-component{
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 22px;
-        margin: 0 24px;
-    }
-    .telephone{
-        font-weight: 600;
+        padding-left: calc((100% - 1440px) / 2 + 50px);
+        padding-right: 200px;
     }
 }
-@media screen and (max-width: 1187px) {
-    .header{
-        height: 90px;
-    }
+@media screen and (min-width: 800px) and (max-width: 1440px) {
     .gap-1{
-        padding-left: calc((100% - 1440px) / 2);
+        padding-left: calc((100% - 1440px) / 2 + 50px);
+        padding-right: calc(200px - (1440px - 100%));
     }
-    .gap-2{
-        padding-right: calc((100% - 1440px) / 2);
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    .header {
+        display: none;
     }
-    .header-component{
+    .mobile-header {
+        position: fixed;
+        width: 100%;
+        height: 56px;
+        background: #FBFBFD;
+        box-shadow: #CACACA 1px 0 5px;
+        border-radius: 0 0 10px 10px;
+        z-index: 900;
+    }
+    .row {
+        display: flex;
+    }
+    .col {
+        opacity: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+        color: #3A3A3A;
+        font-family: Gilroy;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+    }
+    hr {
+        margin: 20px -8px;
+        border: 1px solid #EEEEEE;
+    }
+    .sub {
+        color: #151D28;
+        font-family: Gilroy;
         font-size: 18px;
+        font-style: normal;
         font-weight: 400;
-        line-height: 20px;
-        margin: 0 22px;
+        line-height: normal;
     }
-    .telephone{
-        font-weight: 500;
+    .phone-row {
+        color: #002ED0;
+        font-family: Gilroy;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        display: flex;
+        align-items: bottom;
     }
-}
-@media screen and (max-width: 1097px) {
-    .header{
-        height: 80px;
+    #mob-its {
+        height: 36px;
+        padding-top: 12px;
+        padding-left: 20px;
+        padding-right: calc(649px - (800px - 100%));
     }
-    .header-component{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-        margin: 0 18px;
+    #mob-phone {
+        height: 32px;
+        padding-top: 12px;
     }
-    .telephone{
-        font-weight: 500;
+    #img-phone2 {
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+    #menu-cross {
+        width: 28px;
+        height: 28px;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-left: 15px;
     }
 }
