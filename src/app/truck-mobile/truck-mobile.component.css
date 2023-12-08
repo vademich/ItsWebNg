@@ -71,16 +71,16 @@
     .screen {
         display: none;
     }
-    .mobile-screen {
+    /* .mobile-screen {
         overflow: hidden;
-    }
-    .page {
-        overflow: hidden;
-        display: flex;
-        flex-direction: row;
-        align-items: top;
-        padding-top: 60px;
-    }
+    } */
+    /* .page { */
+        /* overflow: hidden; */
+        /* display: flex;
+        flex-direction: column; */
+        /* align-items: top;
+        padding-top: 60px; */
+    /* } */
     .truck {
         /* width: 1030px;
         height: 540px; */
@@ -104,4 +104,9 @@
     .block {
         width: 341px;
     }
+}
+/*  */
+.truck{
+
+    background-image: url(../../assets/images/truck.svg);
 }
