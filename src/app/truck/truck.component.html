@@ -60,8 +60,18 @@
 
     <div class="page" (mouseenter)="moveTruck()">
 
-        <div class="block">
-            <app-quote-block [text]="text"></app-quote-block>
+        <div class="block"
+            (mouseenter)="captionShow()"
+            (mouseenter)="lineShow()"
+            [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
+            <div class="decor">
+                <img src="../../assets/images/q-quote.svg">
+                <div style="width:10px;"></div>
+                <hr align="left" color="blue" width="410px"
+                    [@lineHover]="isLineHover ? 'width500' : 'width0'">
+            </div>
+            <p class="gilroy-16 black block">Все это сопровождает нас в бизнесе в период его становления. Мы почувствовали это на себе, на своем бизнесе, созданном в 2014 году.
+                На уровне одного города мы начали объединять различный сервис для грузовых машин и за несколько лет стали крупнейшим агрегатором автомобильного сервиса в Евразии.</p>
         </div>
 
         <div class="truck padding-right-30"

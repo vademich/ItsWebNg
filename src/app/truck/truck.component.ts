@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -58,12 +58,45 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'opacity': '0',
       })),
       transition('start => move-from-left', [animate('1s ease-out')])
-    ])
+    ]),
+    //
+    trigger('captionHover', [
+      state('invisible',
+      style({
+        opacity: 0
+      })),
+      state('visible',
+      style({
+        opacity: 1
+      })),
+      transition('invisible => visible', [animate('1s')]),
+    ]),
+    trigger('lineHover', [
+      state('width0',
+      style({
+        width: '0px'
+      })),
+      state('width500',
+      style({
+        width: '300px'
+      })),
+      transition('width0 => width500', [animate('1s ease-in')]),
+    ]),
   ],
   templateUrl: './truck.component.html',
   styleUrls: ['./truck.component.css']
 })
 export class TruckComponent {
+  // @Input() text = 'Все это сопровождает нас в бизнесе в период его становления. Мы почувствовали это на себе, на своем бизнесе, созданном в 2014 году. На уровне одного города мы начали объединять различный сервис для грузовых машин и за несколько лет стали крупнейшим агрегатором автомобильного сервиса в Евразии.';
+  isCaptionHover = false;
+  captionShow(){
+    this.isCaptionHover = true;
+  }
+  isLineHover = false;
+  lineShow(){
+    this.isLineHover = true;
+  }
+
   text = `Все это сопровождает нас в бизнесе в период его становления. Мы почувствовали это на себе, на своем бизнесе, созданном в 2014 году.
   На уровне одного города мы начали объединять различный сервис для грузовых машин и за несколько лет стали крупнейшим агрегатором автомобильного сервиса в Евразии.`
   
