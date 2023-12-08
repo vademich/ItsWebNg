@@ -66,18 +66,13 @@
 }
 
 
-/* Monitors */
-@media (min-width: 800px) {
-    .mobile-screen {
+/* Mobile */
+@media (max-width: 800px) {
+    .screen {
         display: none;
     }
-    .screen {
-        width: 1440px;
-        /* height: 100%; */
+    .mobile-screen {
         overflow: hidden;
-        background: #FBFBFD;
-        padding-top: 120px;
-        padding-bottom: 60px;
     }
     .page {
         overflow: hidden;
@@ -87,21 +82,26 @@
         padding-top: 60px;
     }
     .truck {
-        width: 1030px;
-        height: 540px;
+        /* width: 1030px;
+        height: 540px; */
+        width: 365px;
         background-repeat: no-repeat;
         background-position: bottom left;
     }
     .light {
-        width: 1030px;
-        height: 540px;
+        /* width: 1030px;
+        height: 540px; */
+        width: 365px;
         background-repeat: no-repeat;
         background-position: bottom left;
     }
     .gray-letters {
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 50px;
+        font-size: calc((100vw - 800px) / 250 + 24px);
+        /* font-size: 24px; */
+        font-weight: 500;
+        line-height: 30px;
+    }
+    .block {
+        width: 341px;
     }
 }
-
