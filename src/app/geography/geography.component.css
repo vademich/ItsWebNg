@@ -24,6 +24,24 @@
         margin: 20px;
         padding: 0 60px;
     }
+    .gilroy-24 {
+        font-family: Gilroy;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+    .gilroy-48 {
+        font-family: Gilroy;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 46px;
+    }
+    .black {
+        color: #3A3A3A;
+    }
+    .blue {
+        color: #002ED0;
+    }
 }
 @media (max-width: 800px) {
     .geography {
@@ -40,36 +58,35 @@
     .col {
         padding: 0 20px;
     }
-}
-
-.gilroy-24 {
-    font-family: Gilroy;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px;
-}
-
-.gilroy-16 {
-    font-family: Gilroy;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-.black {
-    color: #3A3A3A;
-}
-.blue {
-    color: #002ED0;
-}
-.wrapper {
-    width: calc(100% - 30px);
-    justify-content: space-between;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    overflow-x: scroll;
-
-    padding-left: 220px;
+    .gilroy-24 {
+        font-family: Gilroy;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+    }
+    
+    .gilroy-16 {
+        font-family: Gilroy;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .black {
+        color: #3A3A3A;
+    }
+    .blue {
+        color: #002ED0;
+    }
+    .wrapper {
+        width: calc(100% - 30px);
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        overflow-x: scroll;
+    
+        padding-left: 220px;
+    }
 }
