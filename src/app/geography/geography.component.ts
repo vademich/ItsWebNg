@@ -32,7 +32,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ],
   templateUrl: './geography.component.html',
-  styleUrls: ['./geography.component.css', '../css/typography.css']
+  styleUrls: ['./geography.component.css']//, '../css/typography.css']
 })
 export class GeographyComponent {
   flagsOne = false;
