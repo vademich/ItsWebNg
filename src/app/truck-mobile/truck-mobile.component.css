@@ -81,32 +81,42 @@
         /* align-items: top;
         padding-top: 60px; */
     /* } */
-    .truck {
-        /* width: 1030px;
-        height: 540px; */
-        width: 365px;
+    /* .truck {
         background-repeat: no-repeat;
         background-position: bottom left;
-    }
-    .light {
-        /* width: 1030px;
-        height: 540px; */
-        width: 365px;
+    } */
+    /* .light {
         background-repeat: no-repeat;
         background-position: bottom left;
-    }
-    .gray-letters {
+    } */
+    /* .gray-letters {
         font-size: calc((100vw - 800px) / 250 + 24px);
-        /* font-size: 24px; */
         font-weight: 500;
         line-height: 30px;
-    }
-    .block {
+    } */
+    /* .block {
         width: 341px;
-    }
+    } */
 }
 /*  */
 .truck{
-
+    width: 442px;
+    height: 231px;
+    background-size: 442px 231px;
+    background-repeat: no-repeat;
+    overflow: hidden;
     background-image: url(../../assets/images/truck.svg);
+    transform: translateX(-50px);
+    position: relative;
+    top: 40px;
+}
+.block {
+    font-family: Gilroy;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0 20px;
+    width: 341px;
 }
