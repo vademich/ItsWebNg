@@ -1,3 +1,4 @@
+/* Monitors */
 @media (min-width: 800px) {
     .geography-mobile {
         display: none;
@@ -43,6 +44,7 @@
         color: #002ED0;
     }
 }
+/* Mobile */
 @media (max-width: 800px) {
     .geography {
         display: none;
@@ -50,6 +52,7 @@
     .screen {
         overflow: hidden;
         background-color: #F5F6FB;
+        padding-bottom: 64px;
     }
     .first, .second {
         display: flex;
