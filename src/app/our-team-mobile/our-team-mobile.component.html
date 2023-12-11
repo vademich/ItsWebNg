@@ -1,0 +1,56 @@
+<div class="screen">
+    <div class="row">
+        <div class="gilroy-24">
+            <span class="black">Наша</span><br>
+            <span class="blue">команда</span>
+        </div>
+        <img class="team" src="../../assets/images/team.svg">
+    </div>
+
+    <div class="row">
+        <img src="../../assets/images/q-quote.svg">
+        <hr color="blue" width="90%">
+    </div>
+    <p class="gilroy-15 black text">{{text}}</p>
+
+    <div class="row">
+        <div class="arrow-left"></div>
+        <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
+        <div class="arrow-right"></div>
+    </div>
+
+</div>
+        
+        <!-- <div class="caption padding-left-30"
+            (mouseenter)="captionShow()"
+            (mouseenter)="lineShow()"
+            [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
+            <div class="decor">
+                <img src="../../assets/images/q-quote.svg">
+                <div style="width:10px;"></div>
+                <hr align="left" color="blue" width="410px"
+                    [@lineHover]="isLineHover ? 'width500' : 'width0'">
+            </div>
+            <p class="gilroy-16 black">{{text}}</p>
+        </div> -->
+
+    <!-- <div>
+        <div class="h-row">        
+            <app-quote-block [text]="text"></app-quote-block>            
+            <img class="up" src="../../assets/images/team.svg">
+            <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
+        </div>
+
+
+        <div class="line" 
+            (mouseenter)="showArrows()"
+            (mouseleave)="showArrows()"
+            (mouseenter)="showEmployees()"
+            [@slide-empl]="employeesShown ? 'slide' : 'out'"
+            >
+            <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"></div>
+                <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
+            <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"></div>
+        </div>
+        
+    </div> -->

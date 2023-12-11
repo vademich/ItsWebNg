@@ -24,6 +24,7 @@ import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSet
 import { environment } from 'src/environments/environment';
 import { FooterComponent } from './footer/footer.component';
 import { TruckMobileComponent } from './truck-mobile/truck-mobile.component';
+import { OurTeamMobileComponent } from './our-team-mobile/our-team-mobile.component';
 
 @NgModule({
     imports: [
@@ -45,7 +46,7 @@ import { TruckMobileComponent } from './truck-mobile/truck-mobile.component';
           } as RecaptchaSettings,
         },
       ],
-    declarations: [AppComponent, TruckComponent, MainComponent, HeaderComponent, EmployeeComponent, OurTeamComponent, QuoteBlockComponent, GeographyComponent, CompanyGroupComponent, ContactsComponent, FooterComponent, TruckMobileComponent],
+    declarations: [AppComponent, TruckComponent, MainComponent, HeaderComponent, EmployeeComponent, OurTeamComponent, QuoteBlockComponent, GeographyComponent, CompanyGroupComponent, ContactsComponent, FooterComponent, TruckMobileComponent, OurTeamMobileComponent],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
