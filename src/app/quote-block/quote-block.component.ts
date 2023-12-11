@@ -13,7 +13,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       style({
         opacity: 1
       })),
-      transition('invisible => visible', [animate('1s')]),
+      transition('invisible => visible', [animate('1s ease-in')]),
     ]),
     trigger('lineHover', [
       state('width0',

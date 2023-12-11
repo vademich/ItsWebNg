@@ -44,12 +44,42 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       transition('hide => show',[animate('0.5s ease-out')]),
       transition('show => hide',[animate('0.5s ease-in')])
-    ])
+    ]),
+    trigger('captionHover', [
+      state('invisible',
+      style({
+        opacity: 0
+      })),
+      state('visible',
+      style({
+        opacity: 1
+      })),
+      transition('invisible => visible', [animate('1s ease-in')]),
+    ]),
+    trigger('lineHover', [
+      state('width0',
+      style({
+        width: '0px'
+      })),
+      state('width500',
+      style({
+        width: '500px'
+      })),
+      transition('width0 => width500', [animate('1s ease-in')]),
+    ]),
   ],
   templateUrl: './our-team.component.html',
   styleUrls: ['./our-team.component.css', '../css/typography.css']
 })
 export class OurTeamComponent {
+  isCaptionHover = false;
+  captionShow(){
+    this.isCaptionHover = true;
+  }
+  isLineHover = false;
+  lineShow(){
+    this.isLineHover = true;
+  }
   text = `Все это благодаря небольшой, но очень сильной и эффективной команде. 
   И чтобы расти дальше, любой компании нужно усиливать её со всех сторон. 
   В компании должна быть сильная команда IT, сильная бухгалтерская и юридическая часть,

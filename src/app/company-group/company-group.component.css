@@ -115,7 +115,8 @@
 
     transition-property: all;
     transition-duration: 0.5s;
-}.more-details:hover {
+}
+.more-details:hover {
     width: 127px;
 }
 .more-details:hover::after {
@@ -199,4 +200,17 @@
     position: relative;
     top: -300px;
     left:-40px;
+}
+.decor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+}
+.caption {
+  width: 410px;
+}
+.padding-left-30 {
+    padding-left: 30px;
 }

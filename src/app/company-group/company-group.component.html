@@ -1,11 +1,23 @@
-<div class="page">
+<div class="page"
+(mouseenter)="captionShow()"
+(mouseenter)="lineShow()">
   <div class="company-group">
       <div class="h-row">
           <div class="gilroy-48">
               <span class="black">Группа</span><br>
               <span class="blue">компаний</span>
           </div>
-        <app-quote-block [text]="text"></app-quote-block>
+        <!-- <app-quote-block [text]="text"></app-quote-block> -->
+        <div class="caption padding-left-30"
+        [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
+        <div class="decor">
+            <img src="../../assets/images/q-quote.svg">
+            <div style="width:10px;"></div>
+            <hr align="left" color="blue" width="410px"
+                [@lineHover]="isLineHover ? 'width500' : 'width0'">
+        </div>
+        <p class="gilroy-16 black">{{text}}</p>
+    </div>
         <img class="up" src="../../assets/images/company-group/group.svg">
       </div>
       

@@ -275,12 +275,42 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('shadow-end => shadow-start', [animate('0.3s ease-out')]),
       transition('details-start => details-end', [animate('0.3s ease-out')]),
       transition('details-end => details-start', [animate('0.3s ease-out')])
-    ])
+    ]),
+    trigger('captionHover', [
+      state('invisible',
+      style({
+        opacity: 0
+      })),
+      state('visible',
+      style({
+        opacity: 1
+      })),
+      transition('invisible => visible', [animate('1s ease-in')]),
+    ]),
+    trigger('lineHover', [
+      state('width0',
+      style({
+        width: '0px'
+      })),
+      state('width500',
+      style({
+        width: '500px'
+      })),
+      transition('width0 => width500', [animate('1s ease-in')]),
+    ]),
   ],
   templateUrl: './company-group.component.html',
   styleUrls: ['./company-group.component.css', '../css/typography.css']
 })
 export class CompanyGroupComponent {
+  isCaptionHover = false;
+  captionShow(){
+    this.isCaptionHover = true;
+  }
+  isLineHover = false;
+  lineShow(){
+    this.isLineHover = true;
+  }
   text = `
   Нами было принято решение о создании группы компаний, которая будет сопровождать наши ведущие компании, а также работать на внешнего клиента. Сегодня в нашей группе 8 компаний, работающих в разных направлениях.`;
 

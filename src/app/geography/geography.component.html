@@ -1,11 +1,11 @@
-<div class="geography">
+<div class="geography" (mouseenter)="showFlags()">
     <div class="screen">
         <div class="col">
             <p class="gilroy-48 blue">География</p>
             <p class="gilroy-24 black">Новые страны - новые возможности:</p>
         </div>
         
-        <div (mouseenter)="showFlags()" class="flags" >
+        <div class="flags" >
             <div class="first" [@flag-line-one]="flagsOne ? 'in' : 'out'">
                 <img src="../../assets/images/flags/Казахстан.svg">
                 <img src="../../assets/images/flags/Таджикистан.svg">
@@ -24,14 +24,14 @@
     </div>
 </div>
 
-<div class="geography-mobile">
+<div class="geography-mobile" (mouseenter)="showFlags()">
     <div class="screen">
         <div class="col">
             <p class="gilroy-24 blue">География</p>
             <p class="gilroy-16 black">Новые страны - новые возможности:</p>
         </div>
         
-        <div (mouseenter)="showFlags()" class="flags wrapper" >
+        <div class="flags wrapper" >
             <div class="first" [@flag-line-one]="flagsOne ? 'in' : 'out'">
                 <img src="../../assets/images/flags/Казахстан.svg">
                 <img src="../../assets/images/flags/Таджикистан.svg">

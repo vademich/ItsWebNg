@@ -69,7 +69,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       style({
         opacity: 1
       })),
-      transition('invisible => visible', [animate('1s')]),
+      transition('invisible => visible', [animate('1s ease-in')]),
     ]),
     trigger('lineHover', [
       state('width0',
@@ -78,7 +78,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       state('width500',
       style({
-        width: '300px'
+        width: '90%'
       })),
       transition('width0 => width500', [animate('1s ease-in')]),
     ]),
@@ -112,5 +112,4 @@ export class TruckComponent {
   moveLetters(){
     this.lettersHover = true;
   }
-
 }

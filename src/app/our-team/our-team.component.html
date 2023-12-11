@@ -1,19 +1,32 @@
-<div class="screen">
+<div class="screen"
+(mouseenter)="showArrows()"
+(mouseleave)="showArrows()"
+(mouseenter)="showEmployees()"
+(mouseenter)="captionShow()"
+(mouseenter)="lineShow()">
     <div>
         <div class="h-row">
             <div class="gilroy-48">
                 <span class="black">Наша</span><br>
                 <span class="blue">команда</span>
             </div>        
-            <app-quote-block [text]="text"></app-quote-block>            
+
+            <div class="caption padding-left-30"
+                [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
+                <div class="decor">
+                    <img src="../../assets/images/q-quote.svg">
+                    <div style="width:10px;"></div>
+                    <hr align="left" color="blue" width="410px"
+                        [@lineHover]="isLineHover ? 'width500' : 'width0'">
+                </div>
+                <p class="gilroy-16 black">{{text}}</p>
+            </div>
+
             <img class="up" src="../../assets/images/team.svg">
         </div>
 
 
         <div class="line" 
-            (mouseenter)="showArrows()"
-            (mouseleave)="showArrows()"
-            (mouseenter)="showEmployees()"
             [@slide-empl]="employeesShown ? 'slide' : 'out'"
             >
             <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"></div>

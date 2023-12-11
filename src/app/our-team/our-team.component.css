@@ -100,3 +100,13 @@
     background: url(../../assets/images/arrow_R_act.svg);
     background-repeat: no-repeat;
   }
+  .decor {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      overflow: hidden;
+  }
+  .caption {
+    width: 410px;
+  }
