@@ -24,28 +24,46 @@
     </div>
 </div>
 
-<div class="geography-mobile" (mouseenter)="showFlags()">
+<div class="geography-mobile">
     <div class="screen">
-        <div class="col">
-            <p class="gilroy-24 blue">География</p>
-            <p class="gilroy-16 black">Новые страны - новые возможности:</p>
-        </div>
-        
-        <div class="flags wrapper" >
-            <div class="first" [@flag-line-one]="flagsOne ? 'in' : 'out'">
-                <img src="../../assets/images/flags/Казахстан.svg">
-                <img src="../../assets/images/flags/Таджикистан.svg">
-                <img src="../../assets/images/flags/Кыргызстан.svg">
-                <img src="../../assets/images/flags/Узбекистан.svg">
-                <img src="../../assets/images/flags/Грузия.svg">
+        <p class="gilroy-24 blue">География</p>
+        <p class="gilroy-16 black">Новые страны - новые возможности:</p>
+
+        <!--  -->
+        <div class="wrap flags wrapper">
+            <div class="items-wrap">
+              <div class="items marquee">
+                <div class="item"><img src="../../assets/images/flags/Казахстан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Таджикистан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Кыргызстан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Узбекистан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Грузия.svg"></div>
+              </div>
+              <div aria-hidden="true" class="items marquee">
+                <div class="item"><img src="../../assets/images/flags/Казахстан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Таджикистан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Кыргызстан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Узбекистан.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Грузия.svg"></div>
+              </div>
             </div>
-            <div class="second" [@flag-line-two]="flagsTwo ? 'in' : 'out'">
-                <img src="../../assets/images/flags/Армения.svg">
-                <img src="../../assets/images/flags/Россия.svg">
-                <img src="../../assets/images/flags/Беларусь.svg">
-                <img src="../../assets/images/flags/Турция.svg">
-                <img src="../../assets/images/flags/Германия.svg">
+            <div class="items-wrap">
+              <div class="items marquee reverce">
+                <div class="item"><img src="../../assets/images/flags/Армения.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Россия.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Беларусь.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Турция.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Германия.svg"></div>
+              </div>
+              <div aria-hidden="true" class="items marquee reverce">
+                <div class="item"><img src="../../assets/images/flags/Армения.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Россия.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Беларусь.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Турция.svg"></div>
+                <div class="item"><img src="../../assets/images/flags/Германия.svg"></div>
+              </div>
             </div>
-        </div>
+          </div>
+        <!--  -->
     </div>
 </div>
