@@ -206,12 +206,16 @@
         width: 330px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .content {
         padding: 20px 20px 64px 20px;
     }
     .map {
         width: 100%;
+        padding: 20px;
+        margin: 20px;
     }
     .str img {
         height: 24px;
