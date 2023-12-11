@@ -192,7 +192,8 @@
     padding-top: 40px;
   }
   .rectangle1349 {
-    width: 343px;
+    /* width: 343px; */
+    width: 90%;
     height: 424px;
     
     border-radius: 20px;
