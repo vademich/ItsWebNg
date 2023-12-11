@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css', '../css/typography.css']
+  styleUrls: ['./contacts.component.css']//, '../css/typography.css']
 })
 export class ContactsComponent {
     name: string = "";

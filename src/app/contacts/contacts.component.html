@@ -1,22 +1,79 @@
-<div class="screen">
-    <div class="page">
+<div class="monitors">
+    <div class="screen">
+        <div class="page">
 
-        <div class="content">
-            <div class="gilroy-48">
-                <span class="blue">Контакты</span>
+            <div class="content">
+                <div class="gilroy-48">
+                    <span class="blue">Контакты</span>
+                </div>
+
+                <div class="row">
+
+                    <div class="col gilroy-24-400 black">
+                        <p class="str"><img src="../../assets/images/bxs_map.svg">г. Воронеж, ул. Дорожная, 46</p>
+                        <p class="str"><img src="../../assets/images/ic_round-phone.svg">8 (800) 55 008 55</p>
+                        <p class="str"><img src="../../assets/images/fluent_mail-16-filled.svg">info@mtransservice.ru</p>
+                    </div>
+
+                    <hr class="verticale">
+
+                    <div class="col-2 gilroy-14 black">
+                        <p>Имея опыт не на словах, а на собственных компаниях, наша команда готова помочь вам с реализацией даже самых непростых задач!</p>
+
+                        <form #form="ngForm">
+                            <mat-form-field class="form">
+                                <mat-label class="label">Ваше имя</mat-label>
+                                <input matInput name="name" [(ngModel)]="name">
+                            </mat-form-field>
+                            <mat-form-field class="form">
+                                <mat-label class="label">Телефон</mat-label>
+                                <input matInput name="phone" [(ngModel)]="phone">
+                            </mat-form-field>
+                            <mat-form-field class="form">
+                                <mat-label class="label">Почта</mat-label>
+                                <input matInput name="email" [(ngModel)]="email">
+                            </mat-form-field>     
+                            <!-- <form #form="ngForm"> -->
+                            <re-captcha  class="form" id="recaptcha" name="recaptcha" #recaptcha="ngModel" 
+                            [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+                            <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
+                                <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
+                            </div>
+                            <!-- </form> -->
+                            <button class="form button" (click)="submit(form)">Отправить</button>
+                        </form>
+
+                    </div>
+
+                    <hr class="verticale-2">
+
+                    <div>
+                        <img class="map" src="../../assets/images/map_image.png">
+                    </div>
+
+                </div>
             </div>
 
-            <div class="row">
+        </div>
+    </div>
+</div>
 
-                <div class="col gilroy-24-400 black">
+<div class="mobile">
+    <div class="screen">
+        <div class="page">
+
+            <div class="content">
+                <div class="gilroy-24">
+                    <span class="blue">Контакты</span>
+                </div>
+
+                <div class="gilroy-20-400 black">
                     <p class="str"><img src="../../assets/images/bxs_map.svg">г. Воронеж, ул. Дорожная, 46</p>
                     <p class="str"><img src="../../assets/images/ic_round-phone.svg">8 (800) 55 008 55</p>
                     <p class="str"><img src="../../assets/images/fluent_mail-16-filled.svg">info@mtransservice.ru</p>
                 </div>
 
-                <hr class="verticale">
-
-                <div class="col-2 gilroy-14 black">
+                <div class="gilroy-14 black col-2">
                     <p>Имея опыт не на словах, а на собственных компаниях, наша команда готова помочь вам с реализацией даже самых непростых задач!</p>
 
                     <form #form="ngForm">
@@ -32,26 +89,20 @@
                             <mat-label class="label">Почта</mat-label>
                             <input matInput name="email" [(ngModel)]="email">
                         </mat-form-field>     
-                        <!-- <form #form="ngForm"> -->
                         <re-captcha  class="form" id="recaptcha" name="recaptcha" #recaptcha="ngModel" 
                         [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
                         <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
                             <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
                         </div>
-                        <!-- </form> -->
                         <button class="form button" (click)="submit(form)">Отправить</button>
+
+                        <img class="map" src="../../assets/images/map_image.png">
                     </form>
 
                 </div>
-
-                <hr class="verticale-2">
-
-                <div>
-                    <img class="map" src="../../assets/images/map_image.png">
-                </div>
-
+                
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
