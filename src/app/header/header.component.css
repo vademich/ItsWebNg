@@ -65,6 +65,17 @@ a:hover {
         padding-left: calc((100% - 1440px) / 2 + 50px);
         padding-right: 200px;
     }
+
+    .header-component{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        margin: 0 24px;
+    }
+    .telephone{
+        color: #050608;
+        font-weight: 600;
+    }
 }
 @media screen and (min-width: 800px) and (max-width: 1440px) {
     .gap-1{
