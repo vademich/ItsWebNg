@@ -4,17 +4,17 @@
     background: #ddd;
     background-clip: border-box;
 }
-.field-1 {
-    padding: 0 calc((100% - 1440px) / 2);
+.field-1, .field-2 {
+    padding: 99px calc((100% - 1440px) / 2);
+    margin-top: -99px 0;
     width: 100%;
-    background: #FBFBFD;
     background-clip: border-box;
 }
+.field-1 {
+    background: #FBFBFD;
+}
 .field-2 {
-    padding: 0 calc((100% - 1440px) / 2);
-    width: 100%;
     background: #F5F6FB;
-    background-clip: border-box;
 }
 
 @media (min-width: 800px) {
