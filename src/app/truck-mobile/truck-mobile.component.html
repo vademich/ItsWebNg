@@ -8,22 +8,42 @@
         </div>
     </div>
 
-    <div class="wrapper">
-        <div class="gray-letters" [@lettersFirst]="lettersHover ? 'move-from-right' : 'start'">
-            <span class="word">Свобода </span>
-            <span class="word">Поддержка </span>
-            <span class="word">Развитие </span>
-            <span class="word">Польза </span>
-            <span class="word">Трансформация </span>
-        </div>
-        <div class="gray-letters" [@lettersSecond]="lettersHover ? 'move-from-left' : 'start'">
-            <span class="word">Риски </span>
-            <span class="word">Объединение </span>
-            <span class="word">Созидание </span>
-            <span class="word">Преодоление </span>
-            <span class="word">Победы </span>
-        </div>
-    </div>
+        <!--  -->
+        <div class="wrap wrapper">
+            <div class="items-wrap">
+              <div class="items marquee">
+                <div class="item"><span class="word">Свобода </span></div>
+                <div class="item"><span class="word">Поддержка </span></div>
+                <div class="item"><span class="word">Развитие </span></div>
+                <div class="item"><span class="word">Польза </span></div>
+                <div class="item"><span class="word">Трансформация </span></div>
+              </div>
+              <div aria-hidden="true" class="items marquee">
+                <div class="item"><span class="word">Свобода </span></div>
+                <div class="item"><span class="word">Поддержка </span></div>
+                <div class="item"><span class="word">Развитие </span></div>
+                <div class="item"><span class="word">Польза </span></div>
+                <div class="item"><span class="word">Трансформация </span></div>
+              </div>
+            </div>
+            <div class="items-wrap">
+              <div class="items marquee reverce">
+                <div class="item"><span class="word">Риски </span></div>
+                <div class="item"><span class="word">Объединение </span></div>
+                <div class="item"><span class="word">Созидание </span></div>
+                <div class="item"><span class="word">Преодоление </span></div>
+                <div class="item"><span class="word">Победы </span></div>
+              </div>
+              <div aria-hidden="true" class="items marquee reverce">
+                <div class="item"><span class="word">Риски </span></div>
+                <div class="item"><span class="word">Объединение </span></div>
+                <div class="item"><span class="word">Созидание </span></div>
+                <div class="item"><span class="word">Преодоление </span></div>
+                <div class="item"><span class="word">Победы </span></div>
+              </div>
+            </div>
+          </div>
+        <!--  -->
 
     <div class="page">
 
