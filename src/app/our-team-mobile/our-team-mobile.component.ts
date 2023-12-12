@@ -66,6 +66,51 @@ export class OurTeamMobileComponent {
   employeeJob3 = 'Frontend developer';
   image3 = '../assets/images/people/vadim.jpeg';
 
+  images = ['../assets/images/people/gerbert.png', '', '../assets/images/people/vadim.jpeg'];
+  employeeNames = ['Герберт Ромберг', 'Дмитрий Рыков', 'Вадим Гончаров'];
+  employeeJobs = ['Основатель компании', 'Руководитель IT отдела', 'Frontend developer'];
+
+  current_image = '../assets/images/people/gerbert.png';
+  current_name = 'Герберт Ромберг';
+  current_job = 'Основатель компании';
+  default_img = '../assets/images/people/background.png';
+
+  count_clicks = 0;
+
+  moveRight() {
+    if (this.count_clicks < 3) {
+      this.count_clicks++;
+      if (this.images[this.count_clicks]) {
+        this.current_image = this.images[this.count_clicks];
+      } else {
+      this.current_image = this.default_img;
+      }
+      if (this.employeeNames[this.count_clicks]) {
+        this.current_name = this.employeeNames[this.count_clicks];
+      } else {
+      this.current_name = 'Имя Фамилия';
+      }
+      if (this.employeeJobs[this.count_clicks]) {
+        this.current_job = this.employeeJobs[this.count_clicks];
+      } else {
+      this.current_job = 'Должность';
+      }
+    }
+  }
+
+  moveLeft() {
+    if (this.count_clicks > 0) {
+      this.count_clicks--;
+      this.current_image = this.images[this.count_clicks];
+      this.current_name = this.employeeNames[this.count_clicks];
+      this.current_job = this.employeeJobs[this.count_clicks];
+    }
+    // console.log(this.count_clicks,
+    //   this.current_image,
+    //   this.current_name,
+    //   this.current_job)
+    }
+
   arrowsShown = false;
   showArrows(){
     this.arrowsShown = !this.arrowsShown;

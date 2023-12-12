@@ -15,9 +15,13 @@
 
     <div class="block">
         <div class="row">
-            <div class="arrow-left"></div>
-            <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
-            <div class="arrow-right"></div>
+            <div class="arrow-left"
+            (mousedown)="moveLeft()"
+            ></div>
+            <app-employee [employeeImage]="current_image" [employeeName]="current_name" [job]="current_job"></app-employee>
+            <div class="arrow-right"
+            (mousedown)="moveRight()"
+            ></div>
         </div>
     </div>
 
