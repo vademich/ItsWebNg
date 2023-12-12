@@ -67,11 +67,49 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       transition('width0 => width500', [animate('1s ease-in')]),
     ]),
+    trigger('trigger-move-right', [
+      state('move-0',
+      style({
+        transform: 'translateX(0px)'
+      })),
+      state('move-1',
+      style({
+        transform: 'translateX(-327px)'
+      })),
+      state('move-2',
+      style({
+        transform: 'translateX(-654px)'
+      })),
+      state('move-3',
+      style({
+        transform: 'translateX(-981px)'
+      })),
+      transition('move-1 => move-0', [animate('0.5s linear')]),
+      transition('move-2 => move-1', [animate('0.5s linear')]),
+      transition('move-3 => move-2', [animate('0.5s linear')]),
+    ]),
   ],
   templateUrl: './our-team.component.html',
   styleUrls: ['./our-team.component.css', '../css/typography.css']
 })
 export class OurTeamComponent {
+  count_arrow_clicks = 0;
+  stripeMoveRight() {
+    if (this.count_arrow_clicks > 0) {
+      this.count_arrow_clicks--;
+    }
+    // console.log(this.count_arrow_clicks);
+  }
+  stripeMoveLeft() {
+    if (this.count_arrow_clicks < 3) {
+      this.count_arrow_clicks++;
+    } else {
+      this.count_arrow_clicks = 0;
+    }
+    // console.log(this.count_arrow_clicks);
+  }
+
+
   isCaptionHover = false;
   captionShow(){
     this.isCaptionHover = true;

@@ -15,11 +15,15 @@
 .line {
     display: flex;
     align-items: center;
-    justify-content: space-around;
     flex-direction: row;
     padding-bottom: 60px;
     margin-left: 60px;
     margin-right: 60px;
+  }
+  .stripe {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
   }
   
   .blue-letters{

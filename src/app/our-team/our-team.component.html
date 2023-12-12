@@ -29,12 +29,26 @@
         <div class="line" 
             [@slide-empl]="employeesShown ? 'slide' : 'out'"
             >
-            <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"></div>
-                <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
-                <app-employee [employeeName]="employeeName2" [job]="employeeJob2"></app-employee>
-                <app-employee [employeeImage]="image3" [employeeName]="employeeName3" [job]="employeeJob3"></app-employee>
-                <app-employee></app-employee>
-            <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"></div>
+            <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"
+                (mousedown)="stripeMoveRight()"></div>
+                <div class="stripe" 
+                    [@trigger-move-right]="count_arrow_clicks===0 ? 'move-0' : ''"
+                    [@trigger-move-right]="count_arrow_clicks===1 ? 'move-1' : ''"
+                    [@trigger-move-right]="count_arrow_clicks===2 ? 'move-2' : ''"
+                    [@trigger-move-right]="count_arrow_clicks===3 ? 'move-3' : ''"
+                >
+                    
+                    <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
+                    <app-employee [employeeName]="employeeName2" [job]="employeeJob2"></app-employee>
+                    <app-employee [employeeImage]="image3" [employeeName]="employeeName3" [job]="employeeJob3"></app-employee>
+                    <app-employee></app-employee>
+                    <!--  -->
+                    <app-employee></app-employee>
+                    <app-employee></app-employee>
+                    <app-employee></app-employee>
+                </div>
+            <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"
+                (mousedown)="stripeMoveLeft()"></div>
         </div>
         
     </div>
