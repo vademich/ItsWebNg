@@ -186,7 +186,8 @@
     }
     .button {
         border-radius: 12px;
-        background: #627EDF;
+        /* background: #627EDF; */
+        background: #002ED0;
         color: var(--primary-white, #FFF);
         font-family: Gilroy;
         font-size: 18px;
@@ -211,6 +212,10 @@
     }
     .content {
         padding: 20px 20px 64px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .map {
         width: 100%;
@@ -220,6 +225,7 @@
     .str img {
         height: 24px;
         position: relative;
-        top: 3px;
+        top: 5px;
+        right: 10px;
     }
 }
