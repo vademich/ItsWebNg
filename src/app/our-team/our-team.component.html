@@ -30,13 +30,10 @@
             [@slide-empl]="employeesShown ? 'slide' : 'out'"
             >
             <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"
-                (mousedown)="stripeMoveRight()"></div>
+                (mousedown)="moveL()"></div>
                 <div class="stripe" 
-                    [@trigger-move-right]="count_arrow_clicks===0 ? 'move-0' : ''"
-                    [@trigger-move-right]="count_arrow_clicks===1 ? 'move-1' : ''"
-                    [@trigger-move-right]="count_arrow_clicks===2 ? 'move-2' : ''"
-                    [@trigger-move-right]="count_arrow_clicks===3 ? 'move-3' : ''"
-                >
+                [@trigger-move-right]="move ? 'state-1' : (move1 ? 'state-2' : (move2 ? 'state-3' : 'state-0'))"
+            >
                     
                     <app-employee [employeeImage]="image1" [employeeName]="employeeName1" [job]="employeeJob1"></app-employee>
                     <app-employee [employeeName]="employeeName2" [job]="employeeJob2"></app-employee>
@@ -48,7 +45,7 @@
                     <app-employee></app-employee>
                 </div>
             <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"
-                (mousedown)="stripeMoveLeft()"></div>
+                (mousedown)="moveR()"></div>
         </div>
         
     </div>

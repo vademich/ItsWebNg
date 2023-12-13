@@ -68,45 +68,75 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('width0 => width500', [animate('1s ease-in')]),
     ]),
     trigger('trigger-move-right', [
-      state('move-0',
+      state('state-0',
       style({
         transform: 'translateX(0px)'
       })),
-      state('move-1',
+      state('state-1',
       style({
         transform: 'translateX(-327px)'
       })),
-      state('move-2',
+      state('state-2',
       style({
         transform: 'translateX(-654px)'
       })),
-      state('move-3',
+      state('state-3',
       style({
         transform: 'translateX(-981px)'
       })),
-      transition('move-1 => move-0', [animate('0.5s linear')]),
-      transition('move-2 => move-1', [animate('0.5s linear')]),
-      transition('move-3 => move-2', [animate('0.5s linear')]),
+      transition('state-1 => state-0', [animate('0.5s ease-in-out')]),
+      transition('state-0 => state-1', [animate('0.5s ease-in-out')]),
+      transition('state-2 => state-1', [animate('0.5s ease-in-out')]),
+      transition('state-1 => state-2', [animate('0.5s ease-in-out')]),
+      transition('state-3 => state-2', [animate('0.5s ease-in-out')]),
+      transition('state-2 => state-3', [animate('0.5s ease-in-out')]),
+      transition('state-3 => state-0', [animate('0.5s ease-in-out')]),
+      transition('state-0 => state-3', [animate('0.5s ease-in-out')]),
     ]),
   ],
   templateUrl: './our-team.component.html',
   styleUrls: ['./our-team.component.css', '../css/typography.css']
 })
 export class OurTeamComponent {
-  count_arrow_clicks = 0;
-  stripeMoveRight() {
-    if (this.count_arrow_clicks > 0) {
-      this.count_arrow_clicks--;
+  move = false;
+  move1 = false;
+  move2 = false;
+  moveR() {
+    if (!this.move&&!this.move1&&!this.move2) {
+      this.move = true;
+      this.move1 = false;
+      this.move2 = false;
+    } else if (this.move&&!this.move1&&!this.move2) {
+      this.move = false;
+      this.move1 = true;
+      this.move2 = false;
+    } else if (!this.move&&this.move1&&!this.move2) {
+      this.move = false;
+      this.move1 = false;
+      this.move2 = true;
+    } else if (!this.move&&!this.move1&&this.move2) {
+      this.move = false;
+      this.move1 = false;
+      this.move2 = false;
     }
-    // console.log(this.count_arrow_clicks);
   }
-  stripeMoveLeft() {
-    if (this.count_arrow_clicks < 3) {
-      this.count_arrow_clicks++;
-    } else {
-      this.count_arrow_clicks = 0;
+  moveL() {
+    if (!this.move&&!this.move1&&this.move2) {
+      this.move = false;
+      this.move1 = true;
+      this.move2 = false;
+      debugger
+    } else if (!this.move&&this.move1&&!this.move2) {
+      this.move = true;
+      this.move1 = false;
+      this.move2 = false;
+      debugger
+    }else if (this.move&&!this.move1&&!this.move2) {
+      this.move = false;
+      this.move1 = false;
+      this.move2 = false;
+      debugger
     }
-    // console.log(this.count_arrow_clicks);
   }
 
 
@@ -140,4 +170,6 @@ export class OurTeamComponent {
   showEmployees(){
     this.employeesShown = true;
   }
+
+  
 }
