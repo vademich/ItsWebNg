@@ -1,35 +1,79 @@
-<app-header></app-header>
-<div class="field-2" id="main">
-    <app-main></app-main>
+<div class="header" (mouseout)="showHeight()">
+    <img class="gap-1" src="../../assets/images/its_group.svg">
+    <div class="header-component"><a href="#main" [@main]="main ? 'main' : ''">О компании</a></div>
+    <div class="header-component"><a href="#our-team" [@our-team]="our_team ? 'our-team' : ''">Наша команда</a></div>
+    <div class="header-component"><a href="#company-group" [@group]="group ? 'group' : ''">Группа компаний</a></div>
+    <div class="header-component"><a href="#contacts" [@contacts]="contacts ? 'contacts' : ''">Контакты</a></div>
+    <div class="header-component telephone gap-2">8 (800) 550 08 55 
+      <img src="../../assets/images/Ellipse 105.svg"></div>
 </div>
-<div class="field-1" id="truck">
-    <div class="monitor">
-        <app-truck></app-truck>
-    </div>
-    <div class="mobile" id="truck">
-        <app-truck-mobile></app-truck-mobile>
-    </div>
+
+<div class="mobile-header"
+[@menuClick]="clicked ? 'menu-open' : 'menu-close'"
+>
+  <div class="row">
+      <img id="mob-its" src="../../assets/images/its_group.svg">
+      <img id="mob-phone" src="../../assets/images/Ellipse 105.svg">
+      <div id="menu-cross"
+      [@menuClick]="clicked ? 'cross' : 'menu'"
+      (mousedown)="showMenu()"
+      ></div>
+  </div>
+
+  <div class="col"
+  [@menuClick]="clicked ? 'menu-open' : 'menu-close'"
+  >
+      <hr>
+      <a href="#main">О компании</a>
+      <hr>
+      <a href="#our-team">Наша команда</a>
+      <hr>
+      <a href="#company-group">Группа компаний</a>
+      <hr>
+      <a href="#contacts">Контакты</a>
+      <hr>
+      <div class="phone-row">
+          <img id="img-phone2" src="../../assets/images/phone2.svg">
+          8 (800) 55 008 55 
+      </div>
+      <div class="sub">Звоните в любое время</div>
+  </div>
+
 </div>
-<div class="field-2" id="geography">
-    <app-geography></app-geography>
-</div>
-<div class="field-1"  id="our-team">
-    <div class="monitor">
-        <app-our-team></app-our-team>
+<!-- <app-header></app-header> -->
+<div  (mousewheel)="showHeight()">
+    <div class="field-2" id="main">
+        <app-main></app-main>
     </div>
-    <div class="mobile">
-        <app-our-team-mobile></app-our-team-mobile>
+    <div class="field-1" id="truck">
+        <div class="monitor">
+            <app-truck></app-truck>
+        </div>
+        <div class="mobile" id="truck">
+            <app-truck-mobile></app-truck-mobile>
+        </div>
     </div>
-</div>
-<div class="field-2" id="company-group">
-    <div class="monitor">
-        <app-company-group></app-company-group>
+    <div class="field-2" id="geography">
+        <app-geography></app-geography>
     </div>
-    <div class="mobile">
-        <app-company-group-mobile></app-company-group-mobile>
+    <div class="field-1"  id="our-team">
+        <div class="monitor">
+            <app-our-team></app-our-team>
+        </div>
+        <div class="mobile">
+            <app-our-team-mobile></app-our-team-mobile>
+        </div>
     </div>
-</div>
-<div class="field-2" id="contacts">
-    <app-contacts></app-contacts>
-    <app-footer></app-footer>
+    <div class="field-2" id="company-group">
+        <div class="monitor">
+            <app-company-group></app-company-group>
+        </div>
+        <div class="mobile">
+            <app-company-group-mobile></app-company-group-mobile>
+        </div>
+    </div>
+    <div class="field-2" id="contacts">
+        <app-contacts></app-contacts>
+        <app-footer></app-footer>
+    </div>
 </div>
