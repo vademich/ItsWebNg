@@ -1,12 +1,3 @@
-# version: '3'
-# services:
-#   demongapp:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile
-#       # dockerfile: .docker/prod.dockerfile
-#       # other services here like API, Database ETC
-
 version: '3'
 services:
   itswebng:
