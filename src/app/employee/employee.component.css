@@ -4,25 +4,25 @@ img {
     border-radius: 20px 20px 20px 20px;
     object-fit: cover;
 }
-.medium-letters{
+.employee-job{
     color: #3A3A3A;
     font-family: Gilroy;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 22px;
+    line-height: 20px;
     
     padding-left: 8px;
     margin-top: 8px;
     margin-left: 8px;
 }
-.black-letters-28px{
+.employee-name{
     color: #3A3A3A;
     font-family: Gilroy;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 27px;
     
     padding-left: 8px;
     margin-top: 16px;
