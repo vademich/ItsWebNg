@@ -45,8 +45,8 @@
         background: url(../../assets/images/arrow_L.svg);
         background-repeat: no-repeat;
         position: relative;
-        top: 140px;
-        left: 40px;
+        top: -40px;
+        left: -20px;
         z-index: 800;
         flex-shrink: 0;
     }
@@ -60,8 +60,8 @@
         background: url(../../assets/images/arrow_R.svg);
         background-repeat: no-repeat;
         position: relative;
-        top: 140px;
-        left: -40px;
+        top: -40px;
+        left: 247px;
         z-index: 800;
         flex-shrink: 0;
     }
@@ -71,5 +71,25 @@
     }
     .screen {
         padding-bottom: 64px;
+        overflow: hidden;
     }
+
+  .line {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .stripe {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    position: relative;
+    right: 100px;
+  }
+  app-employee {
+    padding-right: 100px;
+  }
 }
