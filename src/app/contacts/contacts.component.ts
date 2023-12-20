@@ -4,19 +4,13 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']//, '../css/typography.css']
+  styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent {
     name: string = "";
     email: string = "";
     phone: string = "";
-      
-    submit(form: NgForm){
-        console.log(form);
-        console.log(form?.form?.value);
-    }
-  // sitekey - 6LecwScpAAAAAN1P1zLphhzwaNY-0sCid-nsRkwp
-  // secret - 6LecwScpAAAAABgZOmqGK9EL300-hlKV_eIqpqdn
+    
   token: string|undefined;
 
   constructor() {
@@ -29,6 +23,9 @@ export class ContactsComponent {
         form.controls[control].markAsTouched();
       }
       return;
+    }
+    else {
+      console.log(form?.form?.value);
     }
 
     console.debug(`Token [${this.token}] generated`);
