@@ -51,7 +51,7 @@ export class ContactsComponent {
           this.email = '';
           this.token = '';
         })
-        .catch(err => this.snackBar.open(err, 'Закрыть'))
+        .catch(err => this.snackBar.open("Server error", 'Close'))
     }
   }
 
