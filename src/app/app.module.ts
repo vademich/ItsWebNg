@@ -27,6 +27,7 @@ import { TruckMobileComponent } from './truck-mobile/truck-mobile.component';
 import { OurTeamMobileComponent } from './our-team-mobile/our-team-mobile.component';
 import { CompanyGroupMobileComponent } from './company-group-mobile/company-group-mobile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     imports: [
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
         FormsModule,
         RecaptchaFormsModule,
         RecaptchaModule,
-        HttpClientModule
+        HttpClientModule,
+        MatSnackBarModule
     ],
     providers: [
         {

@@ -54,9 +54,6 @@ app.post("/send-letter", function (req, res) {
         body: JSON.stringify(inputBody),
         headers: headers
       })
-      .then(function(res) {
-          return res.json();
-      }).then(function(body) {
-          console.log(body);
-      });
+      .then(res => {return res})
+      .catch(err => {return err})
 })

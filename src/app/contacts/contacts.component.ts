@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import axios from 'axios';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contacts',
@@ -18,7 +19,8 @@ export class ContactsComponent {
   token: string|undefined;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private snackBar: MatSnackBar
   ) {
     this.token = undefined;
   }
@@ -37,12 +39,19 @@ export class ContactsComponent {
         "email": form?.form?.value?.email
     };
       const url = 'http://localhost:5000/send-letter';
-      axios.post(url, data);
-      this.clicked = true;
-      this.name = '';
-      this.phone = '';
-      this.email = '';
-      this.token = '';
+      new Promise((resolve, reject) => {
+        axios.post(url, data)
+        resolve(data)
+      })
+        .then(() => {
+          this.snackBar.open("Ваше письмо отправлено", 'OK');
+          this.clicked = true;
+          this.name = '';
+          this.phone = '';
+          this.email = '';
+          this.token = '';
+        })
+        .catch(err => this.snackBar.open(err, 'Закрыть'))
     }
   }
 
