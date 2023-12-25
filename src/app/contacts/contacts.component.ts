@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import axios from 'axios';
 
 @Component({
   selector: 'app-contacts',
@@ -7,13 +9,17 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent {
-    name: string = "";
-    email: string = "";
-    phone: string = "";
+  clicked = false;
+  
+  name = '';
+  phone = '';
+  email ='';
     
   token: string|undefined;
 
-  constructor() {
+  constructor(
+    private http: HttpClient
+  ) {
     this.token = undefined;
   }
 
@@ -25,10 +31,19 @@ export class ContactsComponent {
       return;
     }
     else {
-      console.log(form?.form?.value);
+      const data = {
+        "name": form?.form?.value?.name,
+        "phone": form?.form?.value?.phone,
+        "email": form?.form?.value?.email
+    };
+      const url = 'http://localhost:5000/send-letter';
+      axios.post(url, data);
+      this.clicked = true;
+      this.name = '';
+      this.phone = '';
+      this.email = '';
+      this.token = '';
     }
-
-    console.debug(`Token [${this.token}] generated`);
   }
 
 }

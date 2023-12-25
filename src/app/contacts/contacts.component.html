@@ -40,7 +40,7 @@
                                 <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
                             </div>
                             
-                            <button class="form button" (click)="send(form)">Отправить</button>
+                            <button [disabled]="clicked" class="form button" (click)="send(form)">Отправить</button>
                         </form>
 
                     </div>
@@ -94,7 +94,7 @@
                         <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
                             <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
                         </div>
-                        <button class="form button" (click)="send(form)">Отправить</button>
+                        <button [disabled]="clicked" class="form button" (click)="send(form)">Отправить</button>
 
                         <img class="map" src="../../assets/images/map_image.png">
                     </form>

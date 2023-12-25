@@ -1,0 +1,10 @@
+version: '3'
+services:
+  itswebng:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: itswebng
+    container_name: itswebng
+    ports:
+      - 8080:80

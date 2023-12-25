@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TruckMobileComponent } from './truck-mobile/truck-mobile.component';
 import { OurTeamMobileComponent } from './our-team-mobile/our-team-mobile.component';
 import { CompanyGroupMobileComponent } from './company-group-mobile/company-group-mobile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -38,6 +39,7 @@ import { CompanyGroupMobileComponent } from './company-group-mobile/company-grou
         FormsModule,
         RecaptchaFormsModule,
         RecaptchaModule,
+        HttpClientModule
     ],
     providers: [
         {
