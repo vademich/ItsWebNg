@@ -9,4 +9,4 @@ RUN npm run build
 #STAGE 2
 FROM nginx:latest
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /usr/src/app/dist/its-web-ng /usr/share/nginx/html
+COPY --from=build /usr/src/app/dist/its-front /usr/share/nginx/html
