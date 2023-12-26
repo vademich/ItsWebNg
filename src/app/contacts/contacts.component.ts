@@ -44,14 +44,14 @@ export class ContactsComponent {
         resolve(data)
       })
         .then(() => {
-          this.snackBar.open("Ваше письмо отправлено", 'OK');
+          // this.snackBar.open("Ваше письмо отправлено", 'OK');
           this.clicked = true;
           this.name = '';
           this.phone = '';
           this.email = '';
           this.token = '';
         })
-        .catch(err => this.snackBar.open("Server error", 'Close'))
+        // .catch(err => this.snackBar.open("Server error", 'Close'))
     }
   }
 
