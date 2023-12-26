@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -57,7 +57,10 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css', '../fonts/fonts.css', '../app/header/header.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  ngOnInit() {
+    this.changeColor();
+  }
 
   // Header
   clicked = false;
@@ -69,7 +72,6 @@ export class AppComponent {
   group = false;
   contacts = false;
   showHeight() {
-    // alert('Текущая прокрутка сверху: ' + window.pageYOffset);
     if (window.pageYOffset < 2410) {
       this.main = true;
     }
@@ -95,4 +97,15 @@ export class AppComponent {
       this.contacts = false;
     }
   }
+
+
+  sleep(ms:number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  changeColor() {
+    this.sleep(1000).then(() => this.showHeight());
+  }
+
 }
+

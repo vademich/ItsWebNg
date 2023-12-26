@@ -1,11 +1,11 @@
-<div class="header" (mouseout)="showHeight()">
+<div class="header" (mousedown)="changeColor()">
     <img class="gap-1" src="../../assets/images/its_group.svg">
     <div class="header-component"><a href="#main" [@main]="main ? 'main' : ''">О компании</a></div>
     <div class="header-component"><a href="#our-team" [@our-team]="our_team ? 'our-team' : ''">Наша команда</a></div>
     <div class="header-component"><a href="#company-group" [@group]="group ? 'group' : ''">Группа компаний</a></div>
     <div class="header-component"><a href="#contacts" [@contacts]="contacts ? 'contacts' : ''">Контакты</a></div>
-    <div class="header-component telephone gap-2">8 (800) 550 08 55 
-      <img src="../../assets/images/Ellipse 105.svg"></div>
+    <div class="header-component telephone gap-2"><a href="tel:+78005500855">8 (800) 550 08 55</a>
+        <a href="tel:+78005500855"><img src="../../assets/images/Ellipse 105.svg"></a></div>
 </div>
 
 <div class="mobile-header"
@@ -13,7 +13,7 @@
 >
   <div class="row">
       <img id="mob-its" src="../../assets/images/its_group.svg">
-      <img id="mob-phone" src="../../assets/images/Ellipse 105.svg">
+      <a href="tel:+7800550855"><img id="mob-phone" src="../../assets/images/Ellipse 105.svg"></a>
       <div id="menu-cross"
       [@menuClick]="clicked ? 'cross' : 'menu'"
       (mousedown)="showMenu()"
@@ -34,14 +34,14 @@
       <hr>
       <div class="phone-row">
           <img id="img-phone2" src="../../assets/images/phone2.svg">
-          8 (800) 55 008 55 
+          <a href="tel:+7800550855">8 (800) 550 08 55</a>
       </div>
       <div class="sub">Звоните в любое время</div>
   </div>
 
 </div>
-<!-- <app-header></app-header> -->
-<div  (mousewheel)="showHeight()">
+
+<div (mousewheel)="showHeight()">
     <div class="field-2" id="main">
         <app-main></app-main>
     </div>
@@ -74,6 +74,8 @@
     </div>
     <div class="field-2" id="contacts">
         <app-contacts></app-contacts>
-        <app-footer></app-footer>
+    </div>
+    <div class="field-2" id="contacts">
+        <app-footer (mousedown)="changeColor()"></app-footer>
     </div>
 </div>
