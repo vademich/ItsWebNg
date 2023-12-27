@@ -8,14 +8,14 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state('truckStart',
       style({
         backgroundImage: 'url(../../../assets/images/truck.svg)',
-        'transform': 'translateX(400px)',
+        'transform': 'translateX(30%)',
         'opacity': '0',
       })),
       state('truckFinish',
       style({
         backgroundImage: 'url(../../../assets/images/truck.svg)',
         'opacity': 1,
-        'transform': 'translateX(-200px)',
+        'transform': 'translateX(-20%)',
       })),
       transition('truckStart => truckFinish', [animate('1s ease-out')])
     ]),

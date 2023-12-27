@@ -1,10 +1,11 @@
 <div class="screen" (mouseenter)="moveLetters()" (mouseenter)="moveTruck()"
     (mouseenter)="captionShow()"
     (mouseenter)="lineShow()">
-    <div class="gilroy-48">
-        <span class="blue">Наш бизнес </span><span class="black">- это:</span>
-    </div>
 
+    <div class="padding-left-40">
+        <span class="blue gilroy-48">Наш бизнес </span><span class="black gilroy-48">- это:</span>
+    </div>
+    <div class="vert-24px"></div>
     <div class="padding-right-30 padding-left-30">
         <div class="gray-letters" [@lettersFirst]="lettersHover ? 'move-from-right' : 'start'">
             <span class="word">Свобода </span>
@@ -13,6 +14,7 @@
             <span class="word">Польза </span>
             <span class="word">Трансформация </span>
         </div>
+        <div class="vert-16px"></div>
         <div class="gray-letters" [@lettersSecond]="lettersHover ? 'move-from-left' : 'start'">
             <span class="word">Риски </span>
             <span class="word">Объединение </span>
@@ -24,7 +26,6 @@
 
     <div class="page">
 
-        <!-- <app-quote-block [text]="text"></app-quote-block> -->
         <div class="caption padding-left-30"
             [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
             <div class="decor">

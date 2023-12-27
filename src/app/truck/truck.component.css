@@ -24,8 +24,6 @@
         font-weight: 700;
         line-height: 46px;
         letter-spacing: 0em;
-        text-align: left;
-        padding: 30px;
     }
     .black {
         color: #3A3A3A;
@@ -38,6 +36,9 @@
     }
     .padding-left-30 {
         padding-left: 30px;
+    }
+    .padding-left-40 {
+        padding-left: 40px;
     }
     .padding-right-16 {
         padding-right: 16px;
@@ -73,7 +74,6 @@
     }
     .screen {
         width: 1440px;
-        /* height: 100%; */
         overflow: hidden;
         background: #FBFBFD;
         padding-top: 120px;
@@ -112,3 +112,9 @@
     }
 }
 
+.vert-24px {
+    padding-top: 24px;
+}
+.vert-16px {
+    padding-top: 16px;
+}
