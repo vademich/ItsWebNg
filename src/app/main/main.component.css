@@ -127,16 +127,17 @@
     }
     .corner-1{
       width: 66px;
-      height: 187px;
+      height: 188px;
       border-radius: 0px 20px 20px 0px;
-      
-      margin-top: 251px;
-      margin-bottom: 14px;
+      position: relative;
+      top: 251px;
     }
     .corner-1-text{
       transform: rotate(-90deg);
       position: relative;
-      top: 125px;
+      top: 75px;
+      display: flex;
+      justify-content: center;
       color: var(--primary-white, #FFF);
       font-family: Gilroy;
       font-size: 24px;
@@ -263,13 +264,15 @@
     height: 145px;
     border-radius: 0px 15px 15px 0px;
     
-    margin-top: 195px;
-    margin-bottom: 11px;
+    position: relative;
+    top: 195px;
   }
   .corner-1-text{
     transform: rotate(-90deg);
     position: relative;
-    top: 95px;
+    top: 55px;
+    display: flex;
+    justify-content: center;
     color: var(--primary-white, #FFF);
     font-family: Gilroy;
     font-size: 18px;
