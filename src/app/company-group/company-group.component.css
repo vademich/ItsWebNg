@@ -76,7 +76,7 @@
     border-radius: 43px;
     position: relative;
     top: -260px;
-    left:-40px;
+    left: -40px;
 }
 .title {
     position: relative;
@@ -116,6 +116,7 @@
     z-index: 600;
     position: relative;
     left: 24px;
+    overflow: hidden;
 
     transition-property: all;
     transition-duration: 0.5s;
