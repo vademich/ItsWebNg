@@ -7,13 +7,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     trigger('truckHover', [
       state('truckStart',
       style({
-        backgroundImage: 'url(../../../assets/images/truck.svg)',
+        backgroundImage: 'url(../../../assets/images/truck.png)',
         'transform': 'translateX(-20px)',
         'opacity': '0',
       })),
       state('truckFinish',
       style({
-        backgroundImage: 'url(../../../assets/images/truck.svg)',
+        backgroundImage: 'url(../../../assets/images/truck.png)',
         'opacity': 1,
         'transform': 'translateX(200px)',
       })),
