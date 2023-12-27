@@ -27,6 +27,7 @@ a:hover {
         z-index: 900;
     
         display: flex;
+        text-wrap: nowrap;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
