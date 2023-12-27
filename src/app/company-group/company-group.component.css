@@ -1,5 +1,6 @@
 .page {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
 }
 .company-group{
     background: #F5F6FB;
@@ -48,7 +49,10 @@
     line-height: 22px;
 }
 .wrapper{
-    padding: 0 60px 60px 60px;
+    /* padding: 0 60px 60px 60px; */
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
 }
 .line{
     display: flex;
