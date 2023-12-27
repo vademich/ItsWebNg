@@ -22,10 +22,7 @@
     .verticale {
         height: 350px;
         border-left: 1px solid transparent;
-    }
-    .verticale-2 {
-        height: 350px;
-        border-left: 1px solid transparent;
+        margin: 0 20px;
     }
     .col {
         display: flex;
@@ -46,6 +43,7 @@
     .button {
         border-radius: 12px;
         background: #627EDF;
+        /* background: #002ED0; */
         color: var(--primary-white, #FFF);
         font-family: Gilroy;
         font-size: 18px;
@@ -60,11 +58,15 @@
         border: none;
         box-shadow: none;
         margin-top: 20px;
+
+        margin-bottom: 80px;
     }
     .row {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
+        justify-content: center;
     }
 
     .map {
@@ -73,7 +75,7 @@
     }
 
     .content {
-        margin: 60px
+        margin: 60px;
     }
     .gilroy-48 {
         font-family: Gilroy;
@@ -110,52 +112,6 @@
         overflow: hidden;
         background: #F5F6FB;
     }
-    /* .form {
-        width: 100%;
-    }
-    .label {
-        color: var(--secondary-secondary, #ADADAD);
-        font-family: Gilroy;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-    .verticale {
-        height: 350px;
-        border-left: 1px solid transparent;
-    }
-    .verticale-2 {
-        height: 350px;
-        border-left: 1px solid transparent;
-    }
-    .col {
-        display: flex;
-        flex-direction: column;
-    }.col-2 {
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-    }
-    .str {
-        display: flex;
-        align-items: center;
-    }
-    .row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .map {
-        min-width: 200px;
-        max-width: 400px;
-    }
-
-    .content {
-        margin: 60px
-    } */
-
     .gilroy-24 {
         font-family: Gilroy;
         font-size: 24px;
@@ -190,8 +146,8 @@
     }
     .button {
         border-radius: 12px;
-        /* background: #627EDF; */
-        background: #002ED0;
+        background: #627EDF;
+        /* background: #002ED0; */
         color: var(--primary-white, #FFF);
         font-family: Gilroy;
         font-size: 18px;
@@ -225,11 +181,16 @@
         width: 100%;
         padding: 20px;
         margin: 20px;
+        position: relative;
+        left: -40px;
     }
     .str img {
         height: 24px;
         position: relative;
         top: 5px;
         right: 10px;
+    }
+    mat-form-field {
+        width: 100%;
     }
 }

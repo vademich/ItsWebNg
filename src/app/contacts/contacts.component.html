@@ -15,9 +15,11 @@
                         <p class="str"><img src="../../assets/images/fluent_mail-16-filled.svg">info&#64;mtransservice.ru</p>
                     </div>
 
-                    <hr class="verticale">
 
-                    <div class="col-2 gilroy-14 black">
+                    <div class="gilroy-14 black">
+                        <div class="row">
+                        <hr class="verticale">
+                        <div class="col-2">
                         <p>Звоните, пишите!
                             Любим, целуем, обнимаем!</p>
                         <form #form="ngForm">
@@ -42,10 +44,11 @@
                             
                             <button [disabled]="clicked" class="form button" (click)="send(form)">Отправить</button>
                         </form>
-
+                        </div>
+                        <hr class="verticale">
+                        </div>
                     </div>
 
-                    <hr class="verticale-2">
 
                     <div>
                         <img class="map" src="../../assets/images/map_image.png">
