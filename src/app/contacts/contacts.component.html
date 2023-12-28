@@ -25,15 +25,15 @@
                         <form #form="ngForm">
                             <mat-form-field class="form">
                                 <mat-label class="label">Ваше имя</mat-label>
-                                <input matInput name="name" [(ngModel)]="name">
+                                <input matInput name="name" [(ngModel)]="name" required>
                             </mat-form-field>
                             <mat-form-field class="form">
                                 <mat-label class="label">Телефон</mat-label>
-                                <input matInput name="phone" [(ngModel)]="phone">
+                                <input matInput name="phone" [(ngModel)]="phone" required>
                             </mat-form-field>
                             <mat-form-field class="form">
                                 <mat-label class="label">Почта</mat-label>
-                                <input matInput name="email" [(ngModel)]="email">
+                                <input matInput name="email" [(ngModel)]="email" required>
                             </mat-form-field>     
                             
                             <re-captcha  class="form" id="recaptcha" name="recaptcha" #recaptcha="ngModel" 
