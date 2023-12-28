@@ -64,7 +64,7 @@ export class AppComponent implements OnInit{
   showMenu() {
     this.clicked = !this.clicked;
   }
-  main = true;
+  main = false;
   our_team = false;
   group = false;
   contacts = false;

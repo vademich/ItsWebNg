@@ -23,13 +23,13 @@
   [@menuClick]="clicked ? 'mopen' : 'mclose'"
   >
       <hr>
-      <a href="#main">О компании</a>
+      <a href="#main" (mousedown)="showMenu()">О компании</a>
       <hr>
-      <a href="#our-team">Наша команда</a>
+      <a href="#our-team" (mousedown)="showMenu()">Наша команда</a>
       <hr>
-      <a href="#company-group">Группа компаний</a>
+      <a href="#company-group" (mousedown)="showMenu()">Группа компаний</a>
       <hr>
-      <a href="#contacts">Контакты</a>
+      <a href="#contacts" (mousedown)="showMenu()">Контакты</a>
       <hr>
       <div class="phone-row">
           <img id="img-phone2" src="../../assets/images/phone2.svg">
