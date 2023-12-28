@@ -5,19 +5,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   selector: 'app-root',
   animations: [
     trigger('menuClick', [
-      state('menu-open',
+      state('mopen',
       style({
-        height: '812px',
-        display: 'flex',
-        'flex-direction': 'column',
-        opacity: 1,
+        transform: 'translateY(0px)'
       })),
-      state('menu-close',
+      state('mclose',
       style({
-        height: '56px'
+        transform: 'translateY(-150%)',
       })),
-      transition('menu-close => menu-open', [animate('0.5s ease-in')]),
-      transition('menu-open => menu-close', [animate('0.5s ease-in')]),
+      transition('mclose => mopen', [animate('0.5s ease-in')]),
+      transition('mopen => mclose', [animate('0.5s ease-in')]),
       state('menu',
       style({
         'background-image': 'url(../../assets/images/menu.svg)'
