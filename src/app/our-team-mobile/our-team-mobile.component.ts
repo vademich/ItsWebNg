@@ -4,33 +4,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-our-team-mobile',
   animations: [
-    trigger('slide-empl', [
-      state('slide',
-      style({
-        opacity: 1,
-        transform: 'translateX(0px)',
-      })),
-      state('out',
-      style({
-        opacity: 0,
-        transform: 'translate(-600px)'
-      })),
-      transition('out => slide', [animate('1s ease-in-out')]),
-    ]),
-    trigger('arrow-r', [
-      state('hide',
-      style({
-        opacity: 0,
-        transform: 'translateX(-30px)'
-      })),
-      state('show',
-      style({
-        opacity: 1,
-        transform: 'translateX(0px)'
-      })),
-      transition('hide => show',[animate('0.5s ease-out')]),
-      transition('show => hide',[animate('0.5s ease-in')])
-    ]),
     trigger('arrow-l', [
       state('hide',
       style({
@@ -45,6 +18,18 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('hide => show',[animate('0.5s ease-out')]),
       transition('show => hide',[animate('0.5s ease-in')])
     ]),
+    trigger('photo', [
+      state('hide',
+      style({
+        opacity: 0,
+      })),
+      state('show',
+      style({
+        opacity: 1,
+      })),
+      transition('hide => show',[animate('0.5s')]),
+      transition('show => hide',[animate('0.5s')])
+    ]),
     trigger('trigger-move-right', [
       state('state-0',
       style({
@@ -52,19 +37,19 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       state('state-1',
       style({
-        transform: 'translateX(-427px)'
+        transform: 'translateX(-327px)'
       })),
       state('state-2',
       style({
-        transform: 'translateX(-854px)'
+        transform: 'translateX(-654px)'
       })),
       state('state-3',
       style({
-        transform: 'translateX(-1281px)'
+        transform: 'translateX(-981px)'
       })),
       state('state-4',
       style({
-        transform: 'translateX(-1708px)'
+        transform: 'translateX(-1308px)'
       })),
       transition('state-1 => state-0', [animate('0.5s ease-in-out')]),
       transition('state-0 => state-1', [animate('0.5s ease-in-out')]),
