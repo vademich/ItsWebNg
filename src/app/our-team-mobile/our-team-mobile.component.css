@@ -46,7 +46,7 @@
         background-repeat: no-repeat;
         position: relative;
         top: -40px;
-        left: -20px;
+        left: 80px;
         z-index: 800;
         flex-shrink: 0;
     }
@@ -61,7 +61,7 @@
         background-repeat: no-repeat;
         position: relative;
         top: -40px;
-        left: 247px;
+        left: 347px;
         z-index: 800;
         flex-shrink: 0;
     }
@@ -79,14 +79,22 @@
     align-items: center;
     flex-direction: row;
     padding-bottom: 60px;
-    margin-left: 60px;
-    margin-right: 60px;
   }
   .stripe {
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    position: relative;
-    right: 100px;
+    justify-content: center;
   }
+}
+@media (max-width: 455px) {
+    .line {
+        position: relative;
+        right: 50px;
+    }
+}
+@media (max-width: 385px) {
+    .line {
+        position: relative;
+        right: 100px;
+    }
 }

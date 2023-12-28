@@ -14,7 +14,8 @@
     <p class="gilroy-15 black text">{{text}}</p>
 
     <div class="line">
-            <div class="arrow-left" (mousedown)="moveL()" [@arrow-l]="(move || move1 || move2 || move3) ? 'show' : 'hide'"
+            <div class="arrow-left" (mousedown)="moveL()"
+             [@arrow-l]="(move || move1 || move2 || move3) ? 'show' : 'hide'"
             ></div>
             <div class="arrow-right" (mousedown)="moveR()"></div>
             <div class="stripe" 

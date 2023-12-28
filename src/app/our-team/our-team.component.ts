@@ -17,6 +17,18 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       transition('out => slide', [animate('1s ease-in-out')]),
     ]),
+    trigger('photo', [
+      state('hide',
+      style({
+        opacity: 0,
+      })),
+      state('show',
+      style({
+        opacity: 1,
+      })),
+      transition('hide => show',[animate('0.5s')]),
+      transition('show => hide',[animate('0.5s')])
+    ]),
     trigger('arrow-r', [
       state('hide',
       style({

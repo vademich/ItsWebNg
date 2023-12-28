@@ -38,11 +38,11 @@
             [@trigger-move-right]="move ? 'state-1' : (move1 ? 'state-2' : (move2 ? 'state-3' : 'state-0'))"
         > -->
                     
-                    <app-employee [employeeImage]="images[0]" [employeeName]="employeeNames[0]" [job]="employeeJobs[0]"></app-employee>
+                    <app-employee [@photo]="(move) ? 'hide' : 'show'" [employeeImage]="images[0]" [employeeName]="employeeNames[0]" [job]="employeeJobs[0]"></app-employee>
                     <app-employee [employeeImage]="images[1]" [employeeName]="employeeNames[1]" [job]="employeeJobs[1]"></app-employee>
                     <app-employee [employeeImage]="images[2]" [employeeName]="employeeNames[2]" [job]="employeeJobs[2]"></app-employee>
                     <app-employee [employeeImage]="images[3]" [employeeName]="employeeNames[3]" [job]="employeeJobs[3]"></app-employee>
-                    <app-employee [employeeImage]="images[4]" [employeeName]="employeeNames[4]" [job]="employeeJobs[4]"></app-employee>
+                    <app-employee [@photo]="(!move) ? 'hide' : 'show'" [employeeImage]="images[4]" [employeeName]="employeeNames[4]" [job]="employeeJobs[4]"></app-employee>
                 </div>
             <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"
                 (mousedown)="moveR()"></div>
