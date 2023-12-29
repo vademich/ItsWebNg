@@ -40,7 +40,7 @@
 
 </div>
 
-<div (mousewheel)="showHeight()">
+<div (mousewheel)="showHeight()" (scroll)="showHeight()">
     <div class="field-2" id="main">
         <app-main></app-main>
     </div>
@@ -105,7 +105,77 @@
         </div>
     </div>
     <div class="field-2" id="geography">
-        <app-geography></app-geography>
+        <!-- <app-geography></app-geography> -->
+        <div class="geography">
+            <div class="screen">
+                <div class="col">
+                    <p class="gilroy-48 blue">География</p>
+                    <p class="gilroy-24 black">Новые страны - новые возможности:</p>
+                </div>
+                
+                <div class="flags" >
+                    <div class="first" [@flag-line-one]="flagsOne ? 'in' : 'out'">
+                        <img src="../../assets/images/flags/Казахстан.png">
+                        <img src="../../assets/images/flags/Таджикистан.png">
+                        <img src="../../assets/images/flags/Кыргызстан.png">
+                        <img src="../../assets/images/flags/Узбекистан.png">
+                        <img src="../../assets/images/flags/Грузия.png">
+                    </div>
+                    <div class="second" [@flag-line-two]="flagsTwo ? 'in' : 'out'">
+                        <img src="../../assets/images/flags/Армения.png">
+                        <img src="../../assets/images/flags/Россия.png">
+                        <img src="../../assets/images/flags/Беларусь.png">
+                        <img src="../../assets/images/flags/Турция.png">
+                        <img src="../../assets/images/flags/Германия.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="geography-mobile">
+            <div class="screen">
+              <div class="block">
+                <p class="gilroy-24 blue ">География</p>
+                <p class="gilroy-16 black ">Новые страны - новые возможности:</p>
+              </div>
+                <!--  -->
+                <div class="wrap wrapper">
+                    <div class="items-wrap">
+                      <div class="items marquee">
+                        <div class="item"><img src="../../assets/images/flags/Казахстан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Таджикистан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Кыргызстан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Узбекистан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Грузия.png"></div>
+                      </div>
+                      <div aria-hidden="true" class="items marquee">
+                        <div class="item"><img src="../../assets/images/flags/Казахстан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Таджикистан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Кыргызстан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Узбекистан.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Грузия.png"></div>
+                      </div>
+                    </div>
+                    <div class="items-wrap">
+                      <div class="items marquee reverce">
+                        <div class="item"><img src="../../assets/images/flags/Армения.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Россия.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Беларусь.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Турция.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Германия.png"></div>
+                      </div>
+                      <div aria-hidden="true" class="items marquee reverce">
+                        <div class="item"><img src="../../assets/images/flags/Армения.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Россия.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Беларусь.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Турция.png"></div>
+                        <div class="item"><img src="../../assets/images/flags/Германия.png"></div>
+                      </div>
+                    </div>
+                  </div>
+                <!--  -->
+            </div>
+        </div>
     </div>
     <div class="field-1"  id="our-team">
         <div class="monitor">

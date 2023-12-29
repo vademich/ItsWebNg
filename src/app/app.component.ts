@@ -129,9 +129,37 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       transition('width0 => width500', [animate('1s ease-in')]),
     ]),
+
+    // GEOGRAPHY
+    trigger('flag-line-one', [
+      state('in',
+      style({
+        opacity: 1,
+        transform: 'translateX(0px)'
+      })),
+      state('out',
+      style({
+        opacity: 0,
+        transform: 'translateX(-100%)'
+      })),
+      transition('out => in', [animate('1s')])
+    ]),
+    trigger('flag-line-two', [
+      state('in',
+      style({
+        opacity: 1,
+        transform: 'translateX(0px)'
+      })),
+      state('out',
+      style({
+        opacity: 0,
+        transform: 'translateX(100%)'
+      })),
+      transition('out => in', [animate('1s')])
+    ])
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', '../fonts/fonts.css', '../app/header/header.component.css', './truck/truck.component.css']
+  styleUrls: ['./app.component.css', '../fonts/fonts.css', '../app/header/header.component.css', './truck/truck.component.css', './geography/geography.component.css']
 })
 export class AppComponent implements OnInit {
   ngOnInit() {
@@ -148,12 +176,15 @@ export class AppComponent implements OnInit {
   group = false;
   contacts = false;
   showHeight() {
-    // console.log(document.body.scrollTop)
+    console.log(document.body.scrollTop)
     if (document.body.scrollTop > 700 && document.body.scrollTop < 1350) {
       this.moveLetters()
       this.moveTruck()
       this.captionShow()
       this.lineShow()
+    }
+    if (document.body.scrollTop > 1800 && document.body.scrollTop < 2800) {
+      this.showFlags()
     }
     if (document.body.scrollTop < 2410) {
       this.main = true;
@@ -216,6 +247,15 @@ export class AppComponent implements OnInit {
   lettersHover = false;
   moveLetters(){
     this.lettersHover = true;
+  }
+
+  // GEOGRAPHY
+
+  flagsOne = false;
+  flagsTwo = false;
+  showFlags(){
+    this.flagsOne = true;
+    this.flagsTwo = true;
   }
 
 }
