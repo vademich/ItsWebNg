@@ -16,9 +16,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#264DD7',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle-end',
       style({
@@ -39,9 +36,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#2692F5',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle2-end',
       style({
@@ -72,9 +66,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#4ED167',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle3-end',
       style({
@@ -95,9 +86,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#FF8C26',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle4-end',
       style({
@@ -118,9 +106,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#8742DB',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle5-end',
       style({
@@ -141,9 +126,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#2A4F78',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle6-end',
       style({
@@ -164,9 +146,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#FFC226',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle7-end',
       style({
@@ -187,9 +166,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         'background-color': '#26C7D0',
         opacity: 0,
         'border-radius': '43px',
-        position: 'relative',
-        top: '-230px',
-        left: '-40px',
       })),
       state('circle8-end',
       style({

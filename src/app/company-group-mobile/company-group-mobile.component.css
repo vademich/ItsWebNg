@@ -47,6 +47,7 @@
         left: 20px;
         z-index: 300;
         opacity: 0;
+        height: 40px;
     }
     .picture {
         position: relative;
