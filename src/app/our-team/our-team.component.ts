@@ -57,7 +57,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('hide => show',[animate('0.5s ease-out')]),
       transition('show => hide',[animate('0.5s ease-in')])
     ]),
-    trigger('captionHover', [
+    trigger('captionHoverOurTeam', [
       state('invisible',
       style({
         opacity: 0
@@ -68,7 +68,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       transition('invisible => visible', [animate('1s ease-in')]),
     ]),
-    trigger('lineHover', [
+    trigger('lineHoverOurTeam', [
       state('width0',
       style({
         width: '0px'
@@ -117,15 +117,15 @@ export class OurTeamComponent {
   moveL() {
     this.move = !this.move;
   }
-  isCaptionHover = false;
-  captionShow(){
-    this.isCaptionHover = true;
+  isCaptionHoverOurTeam = false;
+  captionShowOurTeam(){
+    this.isCaptionHoverOurTeam = true;
   }
-  isLineHover = false;
-  lineShow(){
-    this.isLineHover = true;
+  isLineHoverOurTeam = false;
+  lineShowOurTeam(){
+    this.isLineHoverOurTeam = true;
   }
-  text = `Сегодня люди - это самый важный и ценный ресурс. И с каждым днём их ценность будет расти всё больше и больше. Мы - команда предпринимателей нашей страны 🇷🇺 - покоряем новые рынки 🌎.
+  textOurTeam = `Сегодня люди - это самый важный и ценный ресурс. И с каждым днём их ценность будет расти всё больше и больше. Мы - команда предпринимателей нашей страны 🇷🇺 - покоряем новые рынки 🌎.
   `;
   images = ['../assets/images/people/01.jpg', '../assets/images/people/02.jpg', '../assets/images/people/03.jpg', '../assets/images/people/04.jpg', '../assets/images/people/05.jpg',];
   employeeNames = ['Герберт Ромберг', 'Виктория Дементьевская', 'Оксана Костяева', 'Грануш Хачатрян', 'Денис Задорожный'];

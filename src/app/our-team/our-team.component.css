@@ -1,4 +1,4 @@
-.screen {
+.screenOurTeam {
   width: 1440px;
   overflow: hidden;
   background: #FBFBFD;
@@ -12,7 +12,7 @@
     padding-left: 30px;
 }
 
-.line {
+.lineOurTeam {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -20,7 +20,7 @@
     margin-left: 60px;
     margin-right: 60px;
   }
-  .stripe {
+  .stripeOurTeam {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -42,11 +42,7 @@
     font-weight: 700;
     line-height: 46px;
   }
-  .row{
-      display: flex;
-      flex-direction: row;
-  }
-  .h-row{
+  .h-rowOurTeam{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -55,11 +51,7 @@
       padding-left: 60px;
       padding-right: 60px;
   }
-  .column{
-      display: flex;
-      flex-direction: column;
-  }
-  .caption-2{
+  .captionOurTeam-2{
     width: 410px;
   }
   .small-letters{
@@ -104,13 +96,13 @@
     background: url(../../assets/images/arrow_R_act.svg);
     background-repeat: no-repeat;
   }
-  .decor {
+  .decorOurTeam {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: left;
       overflow: hidden;
   }
-  .caption {
+  .captionOurTeam {
     width: 410px;
   }

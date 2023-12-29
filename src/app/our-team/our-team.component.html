@@ -1,37 +1,37 @@
-<div class="screen"
-(mouseenter)="showArrows()"
-(mouseleave)="showArrows()"
+<div class="screenOurTeam"
 (mouseenter)="showEmployees()"
-(mouseenter)="captionShow()"
-(mouseenter)="lineShow()">
+(mouseenter)="captionShowOurTeam()"
+(mouseenter)="lineShowOurTeam()">
     <div>
-        <div class="h-row">
+        <div class="h-rowOurTeam">
             <div class="gilroy-48">
                 <span class="black">Наша</span><br>
                 <span class="blue">команда</span>
             </div>        
 
-            <div class="caption padding-left-30"
-                [@captionHover]="isCaptionHover ? 'visible' : 'invisible'">
-                <div class="decor">
+            <div class="captionOurTeam padding-left-30"
+                [@captionHoverOurTeam]="isCaptionHoverOurTeam ? 'visible' : 'invisible'">
+                <div class="decorOurTeam">
                     <img src="../../assets/images/q-quote.svg">
                     <div style="width:10px;"></div>
                     <hr align="left" color="blue" width="410px"
-                        [@lineHover]="isLineHover ? 'width500' : 'width0'">
+                        [@lineHoverOurTeam]="isLineHoverOurTeam ? 'width500' : 'width0'">
                 </div>
-                <p class="gilroy-16 black">{{text}}</p>
+                <p class="gilroy-16 black">{{textOurTeam}}</p>
             </div>
 
             <img class="up" src="../../assets/images/team.svg">
         </div>
 
 
-        <div class="line" 
+        <div class="lineOurTeam" 
             [@slide-empl]="employeesShown ? 'slide' : 'out'"
             >
             <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"
                 (mousedown)="moveL()"></div>
-                <div class="stripe" 
+                <div class="stripeOurTeam" 
+                (mouseenter)="showArrows()"
+                (mouseleave)="showArrows()"
                 [@trigger-move-right]="move ? 'state-1' : 'state-0'"
             >       
                     <app-employee [@photo]="(move) ? 'hide' : 'show'" [employeeImage]="images[0]" [employeeName]="employeeNames[0]" [job]="employeeJobs[0]"></app-employee>
