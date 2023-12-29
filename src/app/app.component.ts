@@ -54,7 +54,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css', '../fonts/fonts.css', '../app/header/header.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   ngOnInit() {
     this.changeColor();
   }
@@ -69,25 +69,25 @@ export class AppComponent implements OnInit{
   group = false;
   contacts = false;
   showHeight() {
-    if (window.pageYOffset < 2410) {
+    if (document.body.scrollTop < 2410) {
       this.main = true;
     }
     else {
       this.main = false;
     }
-    if (window.pageYOffset > 2410 && window.pageYOffset < 3270) {
+    if (document.body.scrollTop > 2410 && document.body.scrollTop < 3270) {
       this.our_team = true;
     }
     else {
       this.our_team = false;
     }
-    if (window.pageYOffset > 3270 && window.pageYOffset < 4520) {
+    if (document.body.scrollTop > 3270 && document.body.scrollTop < 4520) {
       this.group = true;
     }
     else {
       this.group = false;
     }
-    if (window.pageYOffset > 4520) {
+    if (document.body.scrollTop > 4520) {
       this.contacts = true;
     }
     else {
