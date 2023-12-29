@@ -87,13 +87,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./truck.component.css']
 })
 export class TruckComponent {
-  isCaptionHover = false;
-  captionShow(){
-    this.isCaptionHover = true;
-  }
-  isLineHover = false;
-  lineShow(){
-    this.isLineHover = true;
+  isLightHover = false;
+  lightOnOff(){
+    this.isLightHover = !this.isLightHover;
   }
 
   text = `Мы - команда предпринимателей - создали компании каждый по своему направлению. 
@@ -101,15 +97,14 @@ export class TruckComponent {
   Задача нашей команды - сделать жизнь водителя в дороге более комфортной и безопасной.`
   
   isTruckHover = false;
-  moveTruck(){
-    this.isTruckHover = true;
-  }
-  isLightHover = false;
-  lightOnOff(){
-    this.isLightHover = !this.isLightHover;
-  }
   lettersHover = false;
-  moveLetters(){
+  isCaptionHover = false;
+  isLineHover = false;
+
+  moveAll() {
+    this.isTruckHover = true;
     this.lettersHover = true;
+    this.isCaptionHover = true;
+    this.isLineHover = true;
   }
 }
