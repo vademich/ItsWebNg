@@ -179,7 +179,52 @@
     </div>
     <div class="field-1"  id="our-team">
         <div class="monitor">
-            <app-our-team></app-our-team>
+            <!-- <app-our-team></app-our-team> -->
+            <div class="screenOurTeam">
+    <div>
+        <div class="h-rowOurTeam">
+            <div class="gilroy-48">
+                <span class="black">Наша</span><br>
+                <span class="blue">команда</span>
+            </div>        
+
+            <div class="captionOurTeam padding-left-30"
+                [@captionHoverOurTeam]="isCaptionHoverOurTeam ? 'visible' : 'invisible'">
+                <div class="decorOurTeam">
+                    <img src="../../assets/images/q-quote.svg">
+                    <div style="width:10px;"></div>
+                    <hr align="left" color="blue" width="410px"
+                        [@lineHoverOurTeam]="isLineHoverOurTeam ? 'width500' : 'width0'">
+                </div>
+                <p class="gilroy-16 black">{{textOurTeam}}</p>
+            </div>
+
+            <img class="up" src="../../assets/images/team.svg">
+        </div>
+
+
+        <div class="lineOurTeam" 
+            [@slide-empl]="employeesShown ? 'slide' : 'out'"
+            >
+            <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"
+                (mousedown)="moveL()"></div>
+                <div class="stripeOurTeam" 
+                (mouseenter)="showArrows()"
+                (mouseleave)="showArrows()"
+                [@trigger-move-right]="move ? 'state-1' : 'state-0'"
+            >       
+                    <app-employee [@photo]="(move) ? 'hide' : 'show'" [employeeImage]="images[0]" [employeeName]="employeeNames[0]" [job]="employeeJobs[0]"></app-employee>
+                    <app-employee [employeeImage]="images[1]" [employeeName]="employeeNames[1]" [job]="employeeJobs[1]"></app-employee>
+                    <app-employee [employeeImage]="images[2]" [employeeName]="employeeNames[2]" [job]="employeeJobs[2]"></app-employee>
+                    <app-employee [employeeImage]="images[3]" [employeeName]="employeeNames[3]" [job]="employeeJobs[3]"></app-employee>
+                    <app-employee [@photo]="(!move) ? 'hide' : 'show'" [employeeImage]="images[4]" [employeeName]="employeeNames[4]" [job]="employeeJobs[4]"></app-employee>
+                </div>
+            <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"
+                (mousedown)="moveR()"></div>
+        </div>
+        
+    </div>
+</div>
         </div>
         <div class="mobile">
             <app-our-team-mobile></app-our-team-mobile>

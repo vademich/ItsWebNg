@@ -156,10 +156,120 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         transform: 'translateX(100%)'
       })),
       transition('out => in', [animate('1s')])
+    ]),
+
+    // OUR TEAM
+    trigger('slide-empl', [
+      state('slide',
+      style({
+        opacity: 1,
+        transform: 'translateX(0px)',
+      })),
+      state('out',
+      style({
+        opacity: 0,
+        transform: 'translate(-600px)'
+      })),
+      transition('out => slide', [animate('1s ease-in-out')]),
+    ]),
+    trigger('photo', [
+      state('hide',
+      style({
+        opacity: 0,
+      })),
+      state('show',
+      style({
+        opacity: 1,
+      })),
+      transition('hide => show',[animate('0.5s')]),
+      transition('show => hide',[animate('0.5s')])
+    ]),
+    trigger('arrow-r', [
+      state('hide',
+      style({
+        opacity: 0,
+        transform: 'translateX(-30px)'
+      })),
+      state('show',
+      style({
+        opacity: 1,
+        transform: 'translateX(0px)'
+      })),
+      transition('hide => show',[animate('0.5s ease-out')]),
+      transition('show => hide',[animate('0.5s ease-in')])
+    ]),
+    trigger('arrow-l', [
+      state('hide',
+      style({
+        opacity: 0,
+        transform: 'translateX(30px)'
+      })),
+      state('show',
+      style({
+        opacity: 1,
+        transform: 'translateX(0px)'
+      })),
+      transition('hide => show',[animate('0.5s ease-out')]),
+      transition('show => hide',[animate('0.5s ease-in')])
+    ]),
+    trigger('captionHoverOurTeam', [
+      state('invisible',
+      style({
+        opacity: 0
+      })),
+      state('visible',
+      style({
+        opacity: 1
+      })),
+      transition('invisible => visible', [animate('1s ease-in')]),
+    ]),
+    trigger('lineHoverOurTeam', [
+      state('width0',
+      style({
+        width: '0px'
+      })),
+      state('width500',
+      style({
+        width: '500px'
+      })),
+      transition('width0 => width500', [animate('1s ease-in')]),
+    ]),
+    trigger('trigger-move-right', [
+      state('state-0',
+      style({
+        transform: 'translateX(0px)'
+      })),
+      state('state-1',
+      style({
+        transform: 'translateX(-327px)'
+      })),
+      state('state-2',
+      style({
+        transform: 'translateX(-654px)'
+      })),
+      state('state-3',
+      style({
+        transform: 'translateX(-981px)'
+      })),
+      transition('state-1 => state-0', [animate('0.5s ease-in-out')]),
+      transition('state-0 => state-1', [animate('0.5s ease-in-out')]),
+      transition('state-2 => state-1', [animate('0.5s ease-in-out')]),
+      transition('state-1 => state-2', [animate('0.5s ease-in-out')]),
+      transition('state-3 => state-2', [animate('0.5s ease-in-out')]),
+      transition('state-2 => state-3', [animate('0.5s ease-in-out')]),
+      transition('state-3 => state-0', [animate('0.5s ease-in-out')]),
+      transition('state-0 => state-3', [animate('0.5s ease-in-out')]),
     ])
+
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', '../fonts/fonts.css', '../app/header/header.component.css', './truck/truck.component.css', './geography/geography.component.css']
+  styleUrls: ['./app.component.css',
+   '../fonts/fonts.css',
+   '../app/header/header.component.css',
+   './truck/truck.component.css',
+   './geography/geography.component.css',
+   './our-team/our-team.component.css'
+    ]
 })
 export class AppComponent implements OnInit {
   ngOnInit() {
@@ -176,7 +286,6 @@ export class AppComponent implements OnInit {
   group = false;
   contacts = false;
   showHeight() {
-    console.log(document.body.scrollTop)
     if (document.body.scrollTop > 700 && document.body.scrollTop < 1350) {
       this.moveLetters()
       this.moveTruck()
@@ -192,7 +301,12 @@ export class AppComponent implements OnInit {
     else {
       this.main = false;
     }
-    if (document.body.scrollTop > 2410 && document.body.scrollTop < 3270) {
+    if (document.body.scrollTop > 2610 && document.body.scrollTop < 3470) {
+      this.showEmployees();
+      this.captionShowOurTeam();
+      this.lineShowOurTeam();
+    }
+    if (document.body.scrollTop > 2510 && document.body.scrollTop < 3270) {
       this.our_team = true;
     }
     else {
@@ -256,6 +370,40 @@ export class AppComponent implements OnInit {
   showFlags(){
     this.flagsOne = true;
     this.flagsTwo = true;
+  }
+
+  // OUR TEAM
+  move = false;
+  isCaptionHoverOurTeam = false;
+  isLineHoverOurTeam = false;
+  arrowsShown = false;
+  employeesShown = false;
+  textOurTeam = `Сегодня люди - это самый важный и ценный ресурс. И с каждым днём их ценность будет расти всё больше и больше. Мы - команда предпринимателей нашей страны 🇷🇺 - покоряем новые рынки 🌎.
+  `;
+  images = ['../assets/images/people/01.jpg', '../assets/images/people/02.jpg', '../assets/images/people/03.jpg', '../assets/images/people/04.jpg', '../assets/images/people/05.jpg',];
+  employeeNames = ['Герберт Ромберг', 'Виктория Дементьевская', 'Оксана Костяева', 'Грануш Хачатрян', 'Денис Задорожный'];
+  employeeJobs = ['Основатель компании ITS Group, консалтинг',
+    'Руководитель Международного направления', 
+    'Директор IT-компании, аккредитованной минцифрой',
+    'Генеральный директор, агрегатор автомобильного сервиса',
+    'Генеральный директор, сеть придорожных сервисов в России'];
+  moveR() {
+    this.move = !this.move;
+  }
+  moveL() {
+    this.move = !this.move;
+  }
+  captionShowOurTeam(){
+    this.isCaptionHoverOurTeam = true;
+  }
+  lineShowOurTeam(){
+    this.isLineHoverOurTeam = true;
+  }
+  showArrows(){
+    this.arrowsShown = !this.arrowsShown;
+  }
+  showEmployees(){
+    this.employeesShown = true;
   }
 
 }
