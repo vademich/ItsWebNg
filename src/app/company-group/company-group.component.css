@@ -49,10 +49,10 @@
     line-height: 22px;
 }
 .wrapper{
-    /* padding: 0 60px 60px 60px; */
     display: flex;
-    /* flex-direction: row; */
     flex-wrap: wrap;
+    position: relative;
+    left: 60px;
 }
 .line{
     display: flex;
@@ -66,7 +66,7 @@
     border-radius: 20px;
     background-color: #FFF;
     overflow: hidden;
-    margin: 20px;
+    margin: 5px;
 }
 .circle {
     width: 86px;
