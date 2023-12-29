@@ -3,7 +3,7 @@
     .geography-mobile {
         display: none;
     }
-    .screen {
+    .screen-geography {
         width: 1440px;
         overflow: hidden;
         background-color: #F5F6FB;
@@ -49,9 +49,12 @@
     .geography {
         display: none;
     }
-    .screen {
+    .screen-geography {
+        width: 1440px;
         overflow: hidden;
         background-color: #F5F6FB;
+        padding-top: 120px;
+        padding-bottom: 60px;
     }
     .block {
       padding: 0 20px 64px 20px;
@@ -108,7 +111,7 @@
   .item {
     transition: all 0.1s ease-in-out;
   }
-  .item .img-flag {
+  .img-flag {
     width: 155px;
     height: 122px;
   }
