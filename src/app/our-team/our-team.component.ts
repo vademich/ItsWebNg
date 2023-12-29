@@ -111,55 +111,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class OurTeamComponent {
   move = false;
-  // move1 = false;
-  // move2 = false;
-
   moveR() {
     this.move = !this.move;
   }
   moveL() {
     this.move = !this.move;
   }
-
-  // moveR() {
-  //   if (!this.move&&!this.move1&&!this.move2) {
-  //     this.move = true;
-  //     this.move1 = false;
-  //     this.move2 = false;
-  //   } else if (this.move&&!this.move1&&!this.move2) {
-  //     this.move = false;
-  //     this.move1 = true;
-  //     this.move2 = false;
-  //   } else if (!this.move&&this.move1&&!this.move2) {
-  //     this.move = false;
-  //     this.move1 = false;
-  //     this.move2 = true;
-  //   } else if (!this.move&&!this.move1&&this.move2) {
-  //     this.move = false;
-  //     this.move1 = false;
-  //     this.move2 = false;
-  //   }
-  // }
-  // moveL() {
-  //   if (!this.move&&!this.move1&&this.move2) {
-  //     this.move = false;
-  //     this.move1 = true;
-  //     this.move2 = false;
-  //     debugger
-  //   } else if (!this.move&&this.move1&&!this.move2) {
-  //     this.move = true;
-  //     this.move1 = false;
-  //     this.move2 = false;
-  //     debugger
-  //   }else if (this.move&&!this.move1&&!this.move2) {
-  //     this.move = false;
-  //     this.move1 = false;
-  //     this.move2 = false;
-  //     debugger
-  //   }
-  // }
-
-
   isCaptionHover = false;
   captionShow(){
     this.isCaptionHover = true;
@@ -170,15 +127,13 @@ export class OurTeamComponent {
   }
   text = `Сегодня люди - это самый важный и ценный ресурс. И с каждым днём их ценность будет расти всё больше и больше. Мы - команда предпринимателей нашей страны 🇷🇺 - покоряем новые рынки 🌎.
   `;
-  
   images = ['../assets/images/people/01.jpg', '../assets/images/people/02.jpg', '../assets/images/people/03.jpg', '../assets/images/people/04.jpg', '../assets/images/people/05.jpg',];
   employeeNames = ['Герберт Ромберг', 'Виктория Дементьевская', 'Оксана Костяева', 'Грануш Хачатрян', 'Денис Задорожный'];
   employeeJobs = ['Основатель компании ITS Group, консалтинг',
     'Руководитель Международного направления', 
-    'Директор IT-компании «ООО Айтишник», аккредитованной минцифрой',
-    'Генеральный директор компании «ООО М3», агрегатора автомобильного сервиса',
-    'Генеральный директор компании «ООО ПК», сети придорожных сервисов в России'];
-
+    'Директор IT-компании, аккредитованной минцифрой',
+    'Генеральный директор, агрегатор автомобильного сервиса',
+    'Генеральный директор, сеть придорожных сервисов в России'];
   arrowsShown = false;
   showArrows(){
     this.arrowsShown = !this.arrowsShown;
@@ -187,6 +142,4 @@ export class OurTeamComponent {
   showEmployees(){
     this.employeesShown = true;
   }
-
-  
 }
