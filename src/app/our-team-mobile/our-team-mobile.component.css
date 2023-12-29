@@ -91,10 +91,10 @@
         right: 50px;
     }
 }
-@media (max-width: 385px) {
+@media (max-width: 395px) {
     .line {
         position: relative;
-        right: 76px;
+        right: 56px;
     }
     .arrow-left, .arrow-right {
         width: 44px;
@@ -105,5 +105,11 @@
         width: 44px;
         height: 44px;
         background-size: contain;
+    }
+}
+@media (max-width: 385px) {
+    .line {
+        position: relative;
+        right: 76px;
     }
 }
