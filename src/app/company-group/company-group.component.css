@@ -124,6 +124,7 @@
 }
 .more-details:hover {
     width: 127px;
+    cursor: pointer;
 }
 .more-details:hover::after {
     content: 'подробнее';
