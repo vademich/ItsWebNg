@@ -20,7 +20,8 @@ a:hover {
         margin-right: 30px;
     }
     .header{
-        position: fixed;
+        position: sticky;
+        top: 0;
         width: 100%;
         background: #FBFBFD;
         box-shadow: #CACACA 1px 0 5px;
@@ -44,7 +45,7 @@ a:hover {
     }
 }
 @media (min-width: 801px) {
-    .header{
+    .header-component{
         height: 99px;
     }
     .gap-2{
