@@ -27,15 +27,16 @@
         margin: 0 0 0 0;
     }
     .box {
-        /* padding: 30px; */
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     
         font-weight: 600;
     }
-    .weight {
+    .weight-500 {
         font-weight: 500;
+        font-family: Gilroy;
+        color: #3A3A3A;
     }
     .google,.apple,.huawei {
         width: 222px;
@@ -45,13 +46,6 @@
         background-size: contain;
         margin-right: 24px;
     }
-    * {
-        color: #3A3A3A;
-        /* font-family: Gilroy;
-        font-size: 20px;
-        font-style: normal;
-        line-height: 22px; */
-    }
     .box {
         color: #3A3A3A;
         font-family: Gilroy;
@@ -60,17 +54,6 @@
         line-height: 22px;
     }
 }
-/* @media (max-width: 1200px) {
-    .google, .apple, .huawei {
-        width: 150px;
-        height: 54px;
-    }
-    .box {
-        font-size: 16px;
-        font-weight: 500;
-    }
-} */
-
 /* Mobile */
 @media (max-width: 800px) {
     .monitor {
@@ -97,20 +80,11 @@
     .logo {
         width: 72px;
     }
-    * {
-        font-family: Gilroy;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 22px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #3A3A3A;
-        padding: 10px;
-    }
 }
 
 a {
     text-decoration: none;
+    color: #3A3A3A;
 }
 
 .google {
