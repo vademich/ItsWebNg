@@ -7,25 +7,6 @@
         font-weight: 700;
         line-height: 26px;
     }
-    .gilroy-16 {
-        font-family: Gilroy;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        letter-spacing: 0em;
-        text-align: left;
-        width: 545px;
-        height: 110px;
-    }
-    .gilroy-48 {
-        font-family: Gilroy;
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 46px;
-        letter-spacing: 0em;
-        text-align: left;
-        padding: 30px;
-    }
     .black {
         color: #3A3A3A;
     }
@@ -44,33 +25,16 @@
     .padding-left-16 {
         padding-left: 16px;
     }
-    .gray-letters {
-        font-family: Gilroy;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 26px;
-
-        font-family: Gilroy;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #CED0E2;
-        display: flex;
-        justify-content: space-between;
-    }
     .word {
         padding: 0 10px;
     }
     .wrapper {
-        /* width: calc(100% - 30px); */
         justify-content: space-between;
         background-repeat: no-repeat;
         overflow: hidden;
-        /* overflow-x: scroll; */
         margin: 0px 10px;
     }
 }
-
 
 /* Mobile */
 @media (max-width: 800px) {
@@ -97,11 +61,6 @@
         padding: 0px 20px 0px 20px;
     }
 }
-/* .page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 .truck{
     height: 420px;
     background-size: contain;
@@ -127,7 +86,7 @@
     font-size: 24px;
     color: #CED0E2;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 26px;
     padding: 0 10px;
 }
