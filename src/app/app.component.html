@@ -206,11 +206,12 @@
         <div class="lineOurTeam" 
             [@slide-empl]="employeesShown ? 'slide' : 'out'"
             >
-            <div class="arrow-left" [@arrow-r]="arrowsShown ? 'show' : 'hide'"
+            <div class="arrow-left" [@arrow-r]="arrowShownLeft ? 'show' : 'hide'"
+                (mouseenter)="showArrowLeft()"
                 (mousedown)="moveL()"></div>
                 <div class="stripeOurTeam" 
                 (mouseenter)="showArrows()"
-                (mouseleave)="showArrows()"
+                (mouseleave)="hideArrows()"
                 [@trigger-move-right]="move ? 'state-1' : 'state-0'"
             >       
                     <app-employee [@photo]="(move) ? 'hide' : 'show'" [employeeImage]="images[0]" [employeeName]="employeeNames[0]" [job]="employeeJobs[0]"></app-employee>
@@ -219,7 +220,8 @@
                     <app-employee [employeeImage]="images[3]" [employeeName]="employeeNames[3]" [job]="employeeJobs[3]"></app-employee>
                     <app-employee [@photo]="(!move) ? 'hide' : 'show'" [employeeImage]="images[4]" [employeeName]="employeeNames[4]" [job]="employeeJobs[4]"></app-employee>
                 </div>
-            <div class="arrow-right" [@arrow-l]="arrowsShown ? 'show' : 'hide'"
+            <div class="arrow-right" [@arrow-l]="arrowShownRight ? 'show' : 'hide'"
+                (mouseenter)="showArrowRight()"
                 (mousedown)="moveR()"></div>
         </div>
         

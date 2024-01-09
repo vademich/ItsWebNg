@@ -376,7 +376,8 @@ export class AppComponent implements OnInit {
   move = false;
   isCaptionHoverOurTeam = false;
   isLineHoverOurTeam = false;
-  arrowsShown = false;
+  arrowShownLeft = false;
+  arrowShownRight = false;
   employeesShown = false;
   textOurTeam = `Сегодня люди - это самый важный и ценный ресурс. И с каждым днём их ценность будет расти всё больше и больше. Мы - команда предпринимателей нашей страны 🇷🇺 - покоряем новые рынки 🌎.
   `;
@@ -399,9 +400,29 @@ export class AppComponent implements OnInit {
   lineShowOurTeam(){
     this.isLineHoverOurTeam = true;
   }
-  showArrows(){
-    this.arrowsShown = !this.arrowsShown;
+
+  showArrows() {
+    if (!this.move) {
+      this.showArrowRight();
+    }
+    else {
+      this.showArrowLeft();
+      this.showArrowRight();
+    }
   }
+  hideArrows() {
+    this.arrowShownLeft = false;
+    this.arrowShownRight = false;
+  }
+  showArrowLeft(){
+    if (this.move) {
+      this.arrowShownLeft = true;
+    }
+  }
+  showArrowRight(){
+    this.arrowShownRight = true;
+  }
+  
   showEmployees(){
     this.employeesShown = true;
   }
