@@ -11,7 +11,7 @@ a:hover {
 
 /* Monitors */
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     .mobile-header {
         display: none;
     }
@@ -43,7 +43,7 @@ a:hover {
         color: #050608;
     }
 }
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     .header{
         height: 99px;
     }
@@ -78,7 +78,7 @@ a:hover {
         font-weight: 600;
     }
 }
-@media screen and (min-width: 800px) and (max-width: 1440px) {
+@media screen and (min-width: 801px) and (max-width: 1440px) {
     .gap-1{
         padding-left: calc((100% - 1440px) / 2 + 50px);
         padding-right: calc(200px - (1440px - 100%));

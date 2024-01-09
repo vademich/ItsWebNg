@@ -68,7 +68,7 @@
 
 
 /* Monitors */
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     .mobile-screen {
         display: none;
     }
