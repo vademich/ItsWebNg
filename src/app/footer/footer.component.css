@@ -60,7 +60,7 @@
         line-height: 22px;
     }
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .google, .apple, .huawei {
         width: 150px;
         height: 54px;
@@ -69,7 +69,7 @@
         font-size: 16px;
         font-weight: 500;
     }
-}
+} */
 
 /* Mobile */
 @media (max-width: 800px) {

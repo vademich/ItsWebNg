@@ -39,35 +39,31 @@ a:hover {
         font-style: normal;
         display: flex;
         align-items: center;
+        font-weight: 500;
+        line-height: 22px;
+        font-size: 22px;
+        margin: 0 24px;
+        height: 99px;
     }
     .telephone{
         color: #050608;
     }
-}
-@media (min-width: 801px) {
-    .header-component{
-        height: 99px;
-    }
     .gap-2{
         padding-right: calc((100% - 1440px) / 2 + 50px);
     }
-    .header-component{
-        font-size: calc((100vw - 800px) / (1920 - 800) * (22 - 12) + 12px);
-
-        font-weight: 500;
-        line-height: 22px;
-        margin: 0 24px;
+    .gap-1{
+        padding-left: calc((100% - 1440px) / 2 + 50px);
+        /* padding-right: calc(200px - (1440px - 100%)); */
     }
     .telephone{
         font-weight: 600;
     }
 }
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
     .gap-1{
         padding-left: calc((100% - 1440px) / 2 + 50px);
         padding-right: 200px;
     }
-
     .header-component{
         font-size: 20px;
         font-weight: 500;
@@ -84,7 +80,7 @@ a:hover {
         padding-left: calc((100% - 1440px) / 2 + 50px);
         padding-right: calc(200px - (1440px - 100%));
     }
-}
+} */
 
 
 

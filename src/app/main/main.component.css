@@ -191,6 +191,35 @@
       top: 25px;
     }
 }
+@media (min-width: 801px) and (max-width: 975px) {
+  .rectangle1349 {
+    display: none;
+  }
+  .rectangle1350 {
+    padding: 20px;
+    margin: 20px;
+    width: 1070px;
+    height: 368px;
+
+    border-radius: 20px;
+    background: linear-gradient(152deg, #002ED0 8.86%, #021C75 98.88%);
+    z-index: 0;
+    
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 38px;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    width: 1070px;
+    position: relative;
+    top: -250px;
+    left: 40px;
+  }
+}
 
 /* Mobile */
 @media (max-width: 800px) {
