@@ -26,3 +26,12 @@
 #menu-cross, #mob-phone {
     cursor: pointer;
 }
+
+.geo-row {
+    display: flex;
+    justify-content: space-between;
+}
+.world {
+    width: 100px;
+    height: 55px;
+}
